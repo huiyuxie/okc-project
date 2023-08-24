@@ -1,0 +1,6672 @@
+[
+  {
+    "model": "app.Shot",
+    "pk": 1,
+    "fields": {
+      "game_player": 1,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 25.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 2,
+    "fields": {
+      "game_player": 1,
+      "is_make": true,
+      "location_x": -7.7,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 3,
+    "fields": {
+      "game_player": 1,
+      "is_make": false,
+      "location_x": 15.8,
+      "location_y": 24.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 4,
+    "fields": {
+      "game_player": 1,
+      "is_make": true,
+      "location_x": -7.8,
+      "location_y": 23.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 5,
+    "fields": {
+      "game_player": 1,
+      "is_make": true,
+      "location_x": 16.3,
+      "location_y": 23.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 6,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -0.2,
+      "location_y": -0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 7,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -0.6,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 8,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": -14.3,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 9,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -5.9,
+      "location_y": 13.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 10,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -10.0,
+      "location_y": 11.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 11,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": -7.0,
+      "location_y": 13.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 12,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": -6.2,
+      "location_y": 5.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 13,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": 0.9,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 14,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -2.0,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 15,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": 12.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 16,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": -18.1,
+      "location_y": 18.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 17,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -1.3,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 18,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -6.6,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 19,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": 1.2,
+      "location_y": 10.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 20,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": -1.0,
+      "location_y": 13.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 21,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 22,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": 0.2,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 23,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -6.2,
+      "location_y": 13.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 24,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -14.1,
+      "location_y": 10.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 25,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": -6.5,
+      "location_y": 13.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 26,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 27,
+    "fields": {
+      "game_player": 2,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": -0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 28,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": 8.7,
+      "location_y": 14.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 29,
+    "fields": {
+      "game_player": 2,
+      "is_make": false,
+      "location_x": 7.1,
+      "location_y": 4.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 30,
+    "fields": {
+      "game_player": 3,
+      "is_make": false,
+      "location_x": -14.3,
+      "location_y": 25.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 31,
+    "fields": {
+      "game_player": 3,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 32,
+    "fields": {
+      "game_player": 3,
+      "is_make": true,
+      "location_x": 0.4,
+      "location_y": 4.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 33,
+    "fields": {
+      "game_player": 3,
+      "is_make": true,
+      "location_x": 13.5,
+      "location_y": 22.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 34,
+    "fields": {
+      "game_player": 3,
+      "is_make": false,
+      "location_x": 0.6,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 35,
+    "fields": {
+      "game_player": 3,
+      "is_make": true,
+      "location_x": 6.9,
+      "location_y": 13.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 36,
+    "fields": {
+      "game_player": 3,
+      "is_make": true,
+      "location_x": 23.2,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 37,
+    "fields": {
+      "game_player": 4,
+      "is_make": false,
+      "location_x": 1.8,
+      "location_y": 24.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 38,
+    "fields": {
+      "game_player": 4,
+      "is_make": true,
+      "location_x": -1.0,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 39,
+    "fields": {
+      "game_player": 4,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": -0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 40,
+    "fields": {
+      "game_player": 4,
+      "is_make": false,
+      "location_x": -2.7,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 41,
+    "fields": {
+      "game_player": 4,
+      "is_make": true,
+      "location_x": 0.6,
+      "location_y": 5.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 42,
+    "fields": {
+      "game_player": 4,
+      "is_make": false,
+      "location_x": 23.5,
+      "location_y": 9.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 43,
+    "fields": {
+      "game_player": 4,
+      "is_make": false,
+      "location_x": 3.4,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 44,
+    "fields": {
+      "game_player": 4,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": -0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 45,
+    "fields": {
+      "game_player": 5,
+      "is_make": true,
+      "location_x": -1.6,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 46,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": 13.5,
+      "location_y": 25.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 47,
+    "fields": {
+      "game_player": 5,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 48,
+    "fields": {
+      "game_player": 5,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 49,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 50,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": -1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 51,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": -23.3,
+      "location_y": 4.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 52,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": 4.0,
+      "location_y": 1.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 53,
+    "fields": {
+      "game_player": 5,
+      "is_make": false,
+      "location_x": -11.9,
+      "location_y": 22.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 54,
+    "fields": {
+      "game_player": 6,
+      "is_make": false,
+      "location_x": -18.3,
+      "location_y": 20.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 55,
+    "fields": {
+      "game_player": 6,
+      "is_make": true,
+      "location_x": -22.8,
+      "location_y": -1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 56,
+    "fields": {
+      "game_player": 6,
+      "is_make": false,
+      "location_x": 14.5,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 57,
+    "fields": {
+      "game_player": 6,
+      "is_make": false,
+      "location_x": -14.1,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 58,
+    "fields": {
+      "game_player": 6,
+      "is_make": true,
+      "location_x": -20.5,
+      "location_y": 17.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 59,
+    "fields": {
+      "game_player": 6,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 60,
+    "fields": {
+      "game_player": 6,
+      "is_make": true,
+      "location_x": 1.6,
+      "location_y": 24.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 61,
+    "fields": {
+      "game_player": 7,
+      "is_make": false,
+      "location_x": -22.8,
+      "location_y": -1.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 62,
+    "fields": {
+      "game_player": 7,
+      "is_make": false,
+      "location_x": 22.7,
+      "location_y": 3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 63,
+    "fields": {
+      "game_player": 7,
+      "is_make": false,
+      "location_x": 16.7,
+      "location_y": 24.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 64,
+    "fields": {
+      "game_player": 8,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 65,
+    "fields": {
+      "game_player": 8,
+      "is_make": true,
+      "location_x": 1.5,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 66,
+    "fields": {
+      "game_player": 8,
+      "is_make": false,
+      "location_x": -22.9,
+      "location_y": -1.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 67,
+    "fields": {
+      "game_player": 8,
+      "is_make": true,
+      "location_x": -1.6,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 68,
+    "fields": {
+      "game_player": 8,
+      "is_make": false,
+      "location_x": -1.3,
+      "location_y": 3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 69,
+    "fields": {
+      "game_player": 8,
+      "is_make": false,
+      "location_x": -22.5,
+      "location_y": 12.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 70,
+    "fields": {
+      "game_player": 8,
+      "is_make": false,
+      "location_x": 23.3,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 71,
+    "fields": {
+      "game_player": 8,
+      "is_make": true,
+      "location_x": 1.5,
+      "location_y": -0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 72,
+    "fields": {
+      "game_player": 8,
+      "is_make": false,
+      "location_x": -7.0,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 73,
+    "fields": {
+      "game_player": 9,
+      "is_make": false,
+      "location_x": -22.5,
+      "location_y": 3.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 74,
+    "fields": {
+      "game_player": 9,
+      "is_make": false,
+      "location_x": 18.5,
+      "location_y": 19.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 75,
+    "fields": {
+      "game_player": 9,
+      "is_make": true,
+      "location_x": 1.5,
+      "location_y": -0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 76,
+    "fields": {
+      "game_player": 9,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 2.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 77,
+    "fields": {
+      "game_player": 10,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 78,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": -0.9,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 79,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": -6.7,
+      "location_y": 14.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 80,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": -1.6,
+      "location_y": 5.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 81,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": 8.1,
+      "location_y": 20.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 82,
+    "fields": {
+      "game_player": 10,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 83,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 84,
+    "fields": {
+      "game_player": 10,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 85,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": -18.9,
+      "location_y": 16.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 86,
+    "fields": {
+      "game_player": 10,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 87,
+    "fields": {
+      "game_player": 10,
+      "is_make": false,
+      "location_x": -1.6,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 88,
+    "fields": {
+      "game_player": 10,
+      "is_make": true,
+      "location_x": 7.7,
+      "location_y": 23.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 89,
+    "fields": {
+      "game_player": 11,
+      "is_make": false,
+      "location_x": 21.7,
+      "location_y": 14.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 90,
+    "fields": {
+      "game_player": 11,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 91,
+    "fields": {
+      "game_player": 11,
+      "is_make": false,
+      "location_x": 0.5,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 92,
+    "fields": {
+      "game_player": 11,
+      "is_make": true,
+      "location_x": -13.6,
+      "location_y": 12.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 93,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": -22.4,
+      "location_y": 11.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 94,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": -0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 95,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 96,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": 12.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 97,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 98,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": -20.8,
+      "location_y": 15.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 99,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": 6.1,
+      "location_y": 7.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 100,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": -15.9,
+      "location_y": 23.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 101,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": 14.7,
+      "location_y": 20.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 102,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": 16.1,
+      "location_y": 33.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 103,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": -21.2,
+      "location_y": 12.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 104,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": -19.0,
+      "location_y": 25.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 105,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": -16.8,
+      "location_y": 22.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 106,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": 15.2,
+      "location_y": 20.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 107,
+    "fields": {
+      "game_player": 12,
+      "is_make": true,
+      "location_x": -23.3,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 108,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": 0.9,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 109,
+    "fields": {
+      "game_player": 12,
+      "is_make": false,
+      "location_x": -15.9,
+      "location_y": 25.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 110,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": 22.2,
+      "location_y": 12.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 111,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": 18.0,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 112,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": 13.5,
+      "location_y": 24.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 113,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 23.0,
+      "location_y": 4.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 114,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 115,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": -0.1,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 116,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": -0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 117,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 7.0,
+      "location_y": 16.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 118,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 119,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": 2.1,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 120,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": -0.1,
+      "location_y": 2.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 121,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": -0.6,
+      "location_y": 2.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 122,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 123,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": -3.8,
+      "location_y": 20.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 124,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": 1.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 125,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 126,
+    "fields": {
+      "game_player": 13,
+      "is_make": true,
+      "location_x": 0.4,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 127,
+    "fields": {
+      "game_player": 13,
+      "is_make": false,
+      "location_x": 22.5,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 128,
+    "fields": {
+      "game_player": 14,
+      "is_make": false,
+      "location_x": 1.0,
+      "location_y": -0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 129,
+    "fields": {
+      "game_player": 14,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 130,
+    "fields": {
+      "game_player": 14,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 131,
+    "fields": {
+      "game_player": 14,
+      "is_make": false,
+      "location_x": 23.9,
+      "location_y": 9.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 132,
+    "fields": {
+      "game_player": 14,
+      "is_make": false,
+      "location_x": 2.7,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 133,
+    "fields": {
+      "game_player": 14,
+      "is_make": true,
+      "location_x": -0.9,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 134,
+    "fields": {
+      "game_player": 14,
+      "is_make": true,
+      "location_x": -1.2,
+      "location_y": 2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 135,
+    "fields": {
+      "game_player": 15,
+      "is_make": false,
+      "location_x": 6.2,
+      "location_y": 7.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 136,
+    "fields": {
+      "game_player": 15,
+      "is_make": false,
+      "location_x": 22.3,
+      "location_y": 4.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 137,
+    "fields": {
+      "game_player": 15,
+      "is_make": true,
+      "location_x": 6.2,
+      "location_y": 8.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 138,
+    "fields": {
+      "game_player": 15,
+      "is_make": true,
+      "location_x": -13.1,
+      "location_y": 24.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 139,
+    "fields": {
+      "game_player": 15,
+      "is_make": false,
+      "location_x": -0.1,
+      "location_y": 2.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 140,
+    "fields": {
+      "game_player": 15,
+      "is_make": true,
+      "location_x": 1.2,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 141,
+    "fields": {
+      "game_player": 15,
+      "is_make": true,
+      "location_x": 1.6,
+      "location_y": 2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 142,
+    "fields": {
+      "game_player": 15,
+      "is_make": false,
+      "location_x": 1.1,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 143,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -1.8,
+      "location_y": 26.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 144,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": -6.0,
+      "location_y": 9.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 145,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -16.8,
+      "location_y": 19.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 146,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -19.6,
+      "location_y": 16.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 147,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": 16.4,
+      "location_y": 22.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 148,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": -16.5,
+      "location_y": 20.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 149,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -15.6,
+      "location_y": 21.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 150,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": -16.5,
+      "location_y": 19.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 151,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": 6.2,
+      "location_y": 6.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 152,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": -18.1,
+      "location_y": 17.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 153,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -21.6,
+      "location_y": 14.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 154,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": 6.1,
+      "location_y": 10.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 155,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -10.8,
+      "location_y": 12.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 156,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": 6.7,
+      "location_y": 13.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 157,
+    "fields": {
+      "game_player": 16,
+      "is_make": true,
+      "location_x": 21.6,
+      "location_y": 14.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 158,
+    "fields": {
+      "game_player": 16,
+      "is_make": false,
+      "location_x": -0.2,
+      "location_y": 2.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 159,
+    "fields": {
+      "game_player": 17,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 160,
+    "fields": {
+      "game_player": 17,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 161,
+    "fields": {
+      "game_player": 17,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 162,
+    "fields": {
+      "game_player": 17,
+      "is_make": true,
+      "location_x": -6.2,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 163,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 23.2,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 164,
+    "fields": {
+      "game_player": 18,
+      "is_make": true,
+      "location_x": 23.2,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 165,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 6.9,
+      "location_y": 5.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 166,
+    "fields": {
+      "game_player": 18,
+      "is_make": true,
+      "location_x": 23.0,
+      "location_y": 2.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 167,
+    "fields": {
+      "game_player": 18,
+      "is_make": true,
+      "location_x": -22.8,
+      "location_y": -1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 168,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 169,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 5.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 170,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 17.3,
+      "location_y": 18.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 171,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": 0.2,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 172,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": -6.2,
+      "location_y": 5.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 173,
+    "fields": {
+      "game_player": 18,
+      "is_make": false,
+      "location_x": -16.2,
+      "location_y": -2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 174,
+    "fields": {
+      "game_player": 19,
+      "is_make": false,
+      "location_x": 0.9,
+      "location_y": 2.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 175,
+    "fields": {
+      "game_player": 19,
+      "is_make": true,
+      "location_x": 0.9,
+      "location_y": 5.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 176,
+    "fields": {
+      "game_player": 19,
+      "is_make": false,
+      "location_x": -0.4,
+      "location_y": 25.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 177,
+    "fields": {
+      "game_player": 20,
+      "is_make": false,
+      "location_x": -17.0,
+      "location_y": 22.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 178,
+    "fields": {
+      "game_player": 20,
+      "is_make": false,
+      "location_x": 2.2,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 179,
+    "fields": {
+      "game_player": 20,
+      "is_make": false,
+      "location_x": -17.0,
+      "location_y": 22.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 180,
+    "fields": {
+      "game_player": 20,
+      "is_make": true,
+      "location_x": -8.1,
+      "location_y": 26.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 181,
+    "fields": {
+      "game_player": 20,
+      "is_make": true,
+      "location_x": -8.5,
+      "location_y": 25.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 182,
+    "fields": {
+      "game_player": 21,
+      "is_make": true,
+      "location_x": 21.0,
+      "location_y": 13.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 183,
+    "fields": {
+      "game_player": 22,
+      "is_make": false,
+      "location_x": -2.8,
+      "location_y": 11.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 184,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": -6.1,
+      "location_y": 4.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 185,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 6.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 186,
+    "fields": {
+      "game_player": 22,
+      "is_make": false,
+      "location_x": 3.6,
+      "location_y": 5.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 187,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 6.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 188,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": -6.9,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 189,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": -1.3,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 190,
+    "fields": {
+      "game_player": 22,
+      "is_make": true,
+      "location_x": -2.1,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 191,
+    "fields": {
+      "game_player": 23,
+      "is_make": false,
+      "location_x": 4.5,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 192,
+    "fields": {
+      "game_player": 23,
+      "is_make": false,
+      "location_x": 4.5,
+      "location_y": 11.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 193,
+    "fields": {
+      "game_player": 23,
+      "is_make": false,
+      "location_x": -6.0,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 194,
+    "fields": {
+      "game_player": 23,
+      "is_make": false,
+      "location_x": -3.2,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 195,
+    "fields": {
+      "game_player": 24,
+      "is_make": false,
+      "location_x": -23.9,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 196,
+    "fields": {
+      "game_player": 24,
+      "is_make": true,
+      "location_x": -1.3,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 197,
+    "fields": {
+      "game_player": 24,
+      "is_make": true,
+      "location_x": -2.3,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 198,
+    "fields": {
+      "game_player": 24,
+      "is_make": false,
+      "location_x": -4.2,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 199,
+    "fields": {
+      "game_player": 24,
+      "is_make": true,
+      "location_x": -3.8,
+      "location_y": 5.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 200,
+    "fields": {
+      "game_player": 24,
+      "is_make": true,
+      "location_x": -19.5,
+      "location_y": 17.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 201,
+    "fields": {
+      "game_player": 24,
+      "is_make": true,
+      "location_x": 3.6,
+      "location_y": 3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 202,
+    "fields": {
+      "game_player": 24,
+      "is_make": false,
+      "location_x": 16.1,
+      "location_y": 20.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 203,
+    "fields": {
+      "game_player": 25,
+      "is_make": false,
+      "location_x": -17.6,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 204,
+    "fields": {
+      "game_player": 25,
+      "is_make": true,
+      "location_x": 5.6,
+      "location_y": 25.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 205,
+    "fields": {
+      "game_player": 25,
+      "is_make": false,
+      "location_x": 23.7,
+      "location_y": -0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 206,
+    "fields": {
+      "game_player": 25,
+      "is_make": false,
+      "location_x": -18.4,
+      "location_y": 12.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 207,
+    "fields": {
+      "game_player": 25,
+      "is_make": true,
+      "location_x": -22.5,
+      "location_y": -3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 208,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 4.8,
+      "location_y": 27.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 209,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": -1.8,
+      "location_y": 2.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 210,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 3.9,
+      "location_y": 9.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 211,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": -5.5,
+      "location_y": 4.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 212,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 3.4,
+      "location_y": 7.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 213,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 5.8,
+      "location_y": 7.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 214,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 3.4,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 215,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 6.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 216,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 2.7,
+      "location_y": 3.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 217,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": -3.7,
+      "location_y": 16.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 218,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": -4.3,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 219,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 2.0,
+      "location_y": 3.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 220,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": 7.5,
+      "location_y": 12.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 221,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": 1.8,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 222,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": 15.3,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 223,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 6.0,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 224,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": 2.7,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 225,
+    "fields": {
+      "game_player": 26,
+      "is_make": false,
+      "location_x": 14.5,
+      "location_y": 25.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 226,
+    "fields": {
+      "game_player": 26,
+      "is_make": true,
+      "location_x": -2.8,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 227,
+    "fields": {
+      "game_player": 27,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 228,
+    "fields": {
+      "game_player": 27,
+      "is_make": true,
+      "location_x": -2.5,
+      "location_y": 12.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 229,
+    "fields": {
+      "game_player": 27,
+      "is_make": true,
+      "location_x": 2.0,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 230,
+    "fields": {
+      "game_player": 27,
+      "is_make": false,
+      "location_x": -4.7,
+      "location_y": 11.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 231,
+    "fields": {
+      "game_player": 27,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 232,
+    "fields": {
+      "game_player": 27,
+      "is_make": false,
+      "location_x": 22.5,
+      "location_y": 12.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 233,
+    "fields": {
+      "game_player": 27,
+      "is_make": false,
+      "location_x": 0.6,
+      "location_y": 7.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 234,
+    "fields": {
+      "game_player": 28,
+      "is_make": true,
+      "location_x": 1.8,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 235,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": 19.9,
+      "location_y": 15.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 236,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": -16.5,
+      "location_y": 22.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 237,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": -5.1,
+      "location_y": 4.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 238,
+    "fields": {
+      "game_player": 28,
+      "is_make": true,
+      "location_x": -22.9,
+      "location_y": 2.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 239,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": 20.6,
+      "location_y": 14.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 240,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": -1.5,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 241,
+    "fields": {
+      "game_player": 28,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 1.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 242,
+    "fields": {
+      "game_player": 28,
+      "is_make": true,
+      "location_x": 14.2,
+      "location_y": 23.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 243,
+    "fields": {
+      "game_player": 28,
+      "is_make": false,
+      "location_x": 9.3,
+      "location_y": 28.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 244,
+    "fields": {
+      "game_player": 28,
+      "is_make": true,
+      "location_x": -4.0,
+      "location_y": 2.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 245,
+    "fields": {
+      "game_player": 29,
+      "is_make": false,
+      "location_x": 2.9,
+      "location_y": 14.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 246,
+    "fields": {
+      "game_player": 29,
+      "is_make": false,
+      "location_x": 23.4,
+      "location_y": -1.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 247,
+    "fields": {
+      "game_player": 29,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 248,
+    "fields": {
+      "game_player": 29,
+      "is_make": false,
+      "location_x": 4.7,
+      "location_y": 2.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 249,
+    "fields": {
+      "game_player": 29,
+      "is_make": false,
+      "location_x": 22.4,
+      "location_y": -0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 250,
+    "fields": {
+      "game_player": 29,
+      "is_make": false,
+      "location_x": -2.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 251,
+    "fields": {
+      "game_player": 29,
+      "is_make": true,
+      "location_x": 3.1,
+      "location_y": 3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 252,
+    "fields": {
+      "game_player": 30,
+      "is_make": true,
+      "location_x": -0.9,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 253,
+    "fields": {
+      "game_player": 30,
+      "is_make": false,
+      "location_x": 15.4,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 254,
+    "fields": {
+      "game_player": 31,
+      "is_make": true,
+      "location_x": 3.8,
+      "location_y": 2.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 255,
+    "fields": {
+      "game_player": 31,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 256,
+    "fields": {
+      "game_player": 31,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 257,
+    "fields": {
+      "game_player": 31,
+      "is_make": false,
+      "location_x": -1.5,
+      "location_y": 9.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 258,
+    "fields": {
+      "game_player": 31,
+      "is_make": true,
+      "location_x": 2.8,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 259,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -15.7,
+      "location_y": 27.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 260,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -11.6,
+      "location_y": 26.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 261,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -19.6,
+      "location_y": 17.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 262,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -10.3,
+      "location_y": 15.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 263,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": 3.4,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 264,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -15.9,
+      "location_y": 20.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 265,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -18.9,
+      "location_y": 19.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 266,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": 16.8,
+      "location_y": 22.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 267,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": -3.6,
+      "location_y": 5.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 268,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -1.1,
+      "location_y": 25.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 269,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": 22.2,
+      "location_y": 12.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 270,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": -2.6,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 271,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": 11.4,
+      "location_y": 26.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 272,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -16.7,
+      "location_y": 27.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 273,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": -7.0,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 274,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 28.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 275,
+    "fields": {
+      "game_player": 32,
+      "is_make": true,
+      "location_x": 5.5,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 276,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -3.8,
+      "location_y": 9.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 277,
+    "fields": {
+      "game_player": 32,
+      "is_make": false,
+      "location_x": -4.2,
+      "location_y": 2.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 278,
+    "fields": {
+      "game_player": 33,
+      "is_make": true,
+      "location_x": -16.3,
+      "location_y": 20.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 279,
+    "fields": {
+      "game_player": 33,
+      "is_make": false,
+      "location_x": -9.3,
+      "location_y": 24.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 280,
+    "fields": {
+      "game_player": 33,
+      "is_make": true,
+      "location_x": 12.3,
+      "location_y": 7.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 281,
+    "fields": {
+      "game_player": 33,
+      "is_make": true,
+      "location_x": -2.8,
+      "location_y": 6.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 282,
+    "fields": {
+      "game_player": 33,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 283,
+    "fields": {
+      "game_player": 33,
+      "is_make": false,
+      "location_x": -2.3,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 284,
+    "fields": {
+      "game_player": 33,
+      "is_make": true,
+      "location_x": 0.9,
+      "location_y": 4.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 285,
+    "fields": {
+      "game_player": 34,
+      "is_make": false,
+      "location_x": -23.7,
+      "location_y": 1.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 286,
+    "fields": {
+      "game_player": 34,
+      "is_make": false,
+      "location_x": -23.2,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 287,
+    "fields": {
+      "game_player": 34,
+      "is_make": false,
+      "location_x": -4.5,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 288,
+    "fields": {
+      "game_player": 34,
+      "is_make": true,
+      "location_x": -21.6,
+      "location_y": 12.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 289,
+    "fields": {
+      "game_player": 34,
+      "is_make": false,
+      "location_x": 2.9,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 290,
+    "fields": {
+      "game_player": 35,
+      "is_make": true,
+      "location_x": -2.5,
+      "location_y": 1.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 291,
+    "fields": {
+      "game_player": 35,
+      "is_make": false,
+      "location_x": -22.7,
+      "location_y": -1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 292,
+    "fields": {
+      "game_player": 35,
+      "is_make": true,
+      "location_x": 1.1,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 293,
+    "fields": {
+      "game_player": 35,
+      "is_make": true,
+      "location_x": 1.8,
+      "location_y": 3.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 294,
+    "fields": {
+      "game_player": 35,
+      "is_make": true,
+      "location_x": -19.6,
+      "location_y": 16.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 295,
+    "fields": {
+      "game_player": 35,
+      "is_make": true,
+      "location_x": 1.8,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 296,
+    "fields": {
+      "game_player": 35,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 297,
+    "fields": {
+      "game_player": 36,
+      "is_make": true,
+      "location_x": -15.9,
+      "location_y": 20.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 298,
+    "fields": {
+      "game_player": 36,
+      "is_make": true,
+      "location_x": -23.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 299,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": 4.2,
+      "location_y": 3.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 300,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": -17.6,
+      "location_y": 20.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 301,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": 23.0,
+      "location_y": 3.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 302,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": -17.4,
+      "location_y": 18.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 303,
+    "fields": {
+      "game_player": 36,
+      "is_make": true,
+      "location_x": 13.6,
+      "location_y": 23.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 304,
+    "fields": {
+      "game_player": 36,
+      "is_make": true,
+      "location_x": -23.7,
+      "location_y": 8.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 305,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": -6.4,
+      "location_y": 8.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 306,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": -2.1,
+      "location_y": 26.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 307,
+    "fields": {
+      "game_player": 36,
+      "is_make": false,
+      "location_x": -24.1,
+      "location_y": 7.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 308,
+    "fields": {
+      "game_player": 37,
+      "is_make": true,
+      "location_x": 1.2,
+      "location_y": 2.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 309,
+    "fields": {
+      "game_player": 37,
+      "is_make": false,
+      "location_x": -2.5,
+      "location_y": 3.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 310,
+    "fields": {
+      "game_player": 37,
+      "is_make": false,
+      "location_x": 9.3,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 311,
+    "fields": {
+      "game_player": 37,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 312,
+    "fields": {
+      "game_player": 37,
+      "is_make": true,
+      "location_x": 2.2,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 313,
+    "fields": {
+      "game_player": 38,
+      "is_make": true,
+      "location_x": 9.9,
+      "location_y": 24.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 314,
+    "fields": {
+      "game_player": 39,
+      "is_make": true,
+      "location_x": -2.5,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 315,
+    "fields": {
+      "game_player": 39,
+      "is_make": false,
+      "location_x": -15.2,
+      "location_y": 22.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 316,
+    "fields": {
+      "game_player": 39,
+      "is_make": false,
+      "location_x": -14.8,
+      "location_y": 14.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 317,
+    "fields": {
+      "game_player": 39,
+      "is_make": true,
+      "location_x": 22.9,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 318,
+    "fields": {
+      "game_player": 39,
+      "is_make": true,
+      "location_x": -23.3,
+      "location_y": 8.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 319,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": 2.2,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 320,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": -1.6,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 321,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": 18.4,
+      "location_y": 21.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 322,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": -16.5,
+      "location_y": 5.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 323,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": -3.1,
+      "location_y": 2.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 324,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": 1.8,
+      "location_y": 2.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 325,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": 1.7,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 326,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": 9.3,
+      "location_y": 24.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 327,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": 0.7,
+      "location_y": 5.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 328,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 40.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 329,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": -3.8,
+      "location_y": 4.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 330,
+    "fields": {
+      "game_player": 40,
+      "is_make": true,
+      "location_x": 23.0,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 331,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": -4.7,
+      "location_y": 2.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 332,
+    "fields": {
+      "game_player": 40,
+      "is_make": false,
+      "location_x": 11.8,
+      "location_y": 4.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 333,
+    "fields": {
+      "game_player": 41,
+      "is_make": true,
+      "location_x": 2.1,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 334,
+    "fields": {
+      "game_player": 41,
+      "is_make": true,
+      "location_x": -0.1,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 335,
+    "fields": {
+      "game_player": 42,
+      "is_make": false,
+      "location_x": 21.6,
+      "location_y": 11.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 336,
+    "fields": {
+      "game_player": 42,
+      "is_make": false,
+      "location_x": -22.8,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 337,
+    "fields": {
+      "game_player": 42,
+      "is_make": true,
+      "location_x": -6.6,
+      "location_y": 2.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 338,
+    "fields": {
+      "game_player": 42,
+      "is_make": true,
+      "location_x": 16.3,
+      "location_y": 20.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 339,
+    "fields": {
+      "game_player": 42,
+      "is_make": true,
+      "location_x": -21.1,
+      "location_y": 16.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 340,
+    "fields": {
+      "game_player": 42,
+      "is_make": false,
+      "location_x": 22.4,
+      "location_y": 5.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 341,
+    "fields": {
+      "game_player": 42,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": -0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 342,
+    "fields": {
+      "game_player": 43,
+      "is_make": false,
+      "location_x": 11.2,
+      "location_y": 24.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 343,
+    "fields": {
+      "game_player": 43,
+      "is_make": true,
+      "location_x": 12.0,
+      "location_y": 24.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 344,
+    "fields": {
+      "game_player": 43,
+      "is_make": false,
+      "location_x": 14.3,
+      "location_y": 22.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 345,
+    "fields": {
+      "game_player": 43,
+      "is_make": true,
+      "location_x": 16.3,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 346,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": 11.8,
+      "location_y": 14.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 347,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -0.1,
+      "location_y": 29.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 348,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": 16.1,
+      "location_y": 22.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 349,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": 10.5,
+      "location_y": 25.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 350,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": 2.5,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 351,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": -9.3,
+      "location_y": 25.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 352,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 353,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 354,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": 14.3,
+      "location_y": 27.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 355,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": 7.8,
+      "location_y": 25.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 356,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -5.8,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 357,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": -14.6,
+      "location_y": 24.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 358,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -18.1,
+      "location_y": 23.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 359,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": -11.3,
+      "location_y": 26.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 360,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": 23.3,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 361,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": -14.8,
+      "location_y": 22.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 362,
+    "fields": {
+      "game_player": 44,
+      "is_make": false,
+      "location_x": 14.7,
+      "location_y": 23.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 363,
+    "fields": {
+      "game_player": 44,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 364,
+    "fields": {
+      "game_player": 45,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 365,
+    "fields": {
+      "game_player": 45,
+      "is_make": true,
+      "location_x": -8.8,
+      "location_y": 13.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 366,
+    "fields": {
+      "game_player": 45,
+      "is_make": true,
+      "location_x": -9.9,
+      "location_y": -1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 367,
+    "fields": {
+      "game_player": 45,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 368,
+    "fields": {
+      "game_player": 45,
+      "is_make": false,
+      "location_x": -23.3,
+      "location_y": -0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 369,
+    "fields": {
+      "game_player": 45,
+      "is_make": false,
+      "location_x": -0.7,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 370,
+    "fields": {
+      "game_player": 45,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": -0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 371,
+    "fields": {
+      "game_player": 46,
+      "is_make": false,
+      "location_x": 1.2,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 372,
+    "fields": {
+      "game_player": 46,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 373,
+    "fields": {
+      "game_player": 46,
+      "is_make": true,
+      "location_x": -18.3,
+      "location_y": 17.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 374,
+    "fields": {
+      "game_player": 46,
+      "is_make": true,
+      "location_x": 23.8,
+      "location_y": 2.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 375,
+    "fields": {
+      "game_player": 46,
+      "is_make": true,
+      "location_x": -17.5,
+      "location_y": 19.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 376,
+    "fields": {
+      "game_player": 46,
+      "is_make": true,
+      "location_x": -0.2,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 377,
+    "fields": {
+      "game_player": 46,
+      "is_make": false,
+      "location_x": -15.4,
+      "location_y": 2.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 378,
+    "fields": {
+      "game_player": 46,
+      "is_make": false,
+      "location_x": -17.2,
+      "location_y": 19.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 379,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 11.6,
+      "location_y": 3.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 380,
+    "fields": {
+      "game_player": 47,
+      "is_make": false,
+      "location_x": 22.4,
+      "location_y": 4.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 381,
+    "fields": {
+      "game_player": 47,
+      "is_make": false,
+      "location_x": 17.6,
+      "location_y": 17.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 382,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 21.4,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 383,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 384,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 20.8,
+      "location_y": 16.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 385,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 0.9,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 386,
+    "fields": {
+      "game_player": 47,
+      "is_make": false,
+      "location_x": 1.0,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 387,
+    "fields": {
+      "game_player": 47,
+      "is_make": false,
+      "location_x": -23.3,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 388,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": -22.7,
+      "location_y": 6.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 389,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": -1.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 390,
+    "fields": {
+      "game_player": 47,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 12.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 391,
+    "fields": {
+      "game_player": 47,
+      "is_make": false,
+      "location_x": -13.1,
+      "location_y": 4.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 392,
+    "fields": {
+      "game_player": 48,
+      "is_make": true,
+      "location_x": 5.9,
+      "location_y": 3.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 393,
+    "fields": {
+      "game_player": 48,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 394,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": 18.6,
+      "location_y": 21.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 395,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 396,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -22.7,
+      "location_y": 11.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 397,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": 11.9,
+      "location_y": 24.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 398,
+    "fields": {
+      "game_player": 49,
+      "is_make": true,
+      "location_x": 1.1,
+      "location_y": 29.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 399,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": 6.2,
+      "location_y": 6.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 400,
+    "fields": {
+      "game_player": 49,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 401,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": 2.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 402,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -15.8,
+      "location_y": 23.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 403,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -2.0,
+      "location_y": 6.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 404,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -15.7,
+      "location_y": 22.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 405,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": -0.1,
+      "location_y": 9.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 406,
+    "fields": {
+      "game_player": 49,
+      "is_make": false,
+      "location_x": 18.4,
+      "location_y": 16.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 407,
+    "fields": {
+      "game_player": 49,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 408,
+    "fields": {
+      "game_player": 50,
+      "is_make": true,
+      "location_x": 1.3,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 409,
+    "fields": {
+      "game_player": 51,
+      "is_make": true,
+      "location_x": 8.3,
+      "location_y": 25.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 410,
+    "fields": {
+      "game_player": 51,
+      "is_make": true,
+      "location_x": 22.8,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 411,
+    "fields": {
+      "game_player": 51,
+      "is_make": false,
+      "location_x": 1.6,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 412,
+    "fields": {
+      "game_player": 51,
+      "is_make": true,
+      "location_x": -16.7,
+      "location_y": 24.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 413,
+    "fields": {
+      "game_player": 51,
+      "is_make": true,
+      "location_x": -22.5,
+      "location_y": 1.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 414,
+    "fields": {
+      "game_player": 52,
+      "is_make": true,
+      "location_x": 0.6,
+      "location_y": -0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 415,
+    "fields": {
+      "game_player": 52,
+      "is_make": false,
+      "location_x": -0.2,
+      "location_y": 25.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 416,
+    "fields": {
+      "game_player": 52,
+      "is_make": true,
+      "location_x": 1.1,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 417,
+    "fields": {
+      "game_player": 52,
+      "is_make": true,
+      "location_x": -23.2,
+      "location_y": 7.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 418,
+    "fields": {
+      "game_player": 52,
+      "is_make": true,
+      "location_x": -6.1,
+      "location_y": 12.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 419,
+    "fields": {
+      "game_player": 53,
+      "is_make": false,
+      "location_x": 15.3,
+      "location_y": 20.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 420,
+    "fields": {
+      "game_player": 53,
+      "is_make": false,
+      "location_x": 1.7,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 421,
+    "fields": {
+      "game_player": 53,
+      "is_make": false,
+      "location_x": -5.6,
+      "location_y": 3.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 422,
+    "fields": {
+      "game_player": 53,
+      "is_make": true,
+      "location_x": 0.4,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 423,
+    "fields": {
+      "game_player": 53,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 424,
+    "fields": {
+      "game_player": 53,
+      "is_make": false,
+      "location_x": -15.6,
+      "location_y": 27.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 425,
+    "fields": {
+      "game_player": 53,
+      "is_make": true,
+      "location_x": 17.5,
+      "location_y": 23.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 426,
+    "fields": {
+      "game_player": 53,
+      "is_make": true,
+      "location_x": -22.9,
+      "location_y": 10.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 427,
+    "fields": {
+      "game_player": 54,
+      "is_make": false,
+      "location_x": 0.7,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 428,
+    "fields": {
+      "game_player": 54,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 429,
+    "fields": {
+      "game_player": 54,
+      "is_make": false,
+      "location_x": 13.5,
+      "location_y": 25.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 430,
+    "fields": {
+      "game_player": 54,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 431,
+    "fields": {
+      "game_player": 54,
+      "is_make": false,
+      "location_x": 2.5,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 432,
+    "fields": {
+      "game_player": 55,
+      "is_make": false,
+      "location_x": -13.7,
+      "location_y": 24.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 433,
+    "fields": {
+      "game_player": 55,
+      "is_make": false,
+      "location_x": -20.7,
+      "location_y": 16.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 434,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 435,
+    "fields": {
+      "game_player": 56,
+      "is_make": false,
+      "location_x": -21.7,
+      "location_y": 11.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 436,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 2.7,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 437,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -8.0,
+      "location_y": 8.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 438,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 439,
+    "fields": {
+      "game_player": 56,
+      "is_make": false,
+      "location_x": 13.1,
+      "location_y": -1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 440,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 0.9,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 441,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -1.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 442,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 443,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": -1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 444,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 445,
+    "fields": {
+      "game_player": 56,
+      "is_make": false,
+      "location_x": 2.3,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 446,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 447,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -1.3,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 448,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": -2.8,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 449,
+    "fields": {
+      "game_player": 56,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 450,
+    "fields": {
+      "game_player": 57,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 451,
+    "fields": {
+      "game_player": 57,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 452,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": 5.8,
+      "location_y": 2.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 453,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -18.8,
+      "location_y": 16.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 454,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -6.9,
+      "location_y": 11.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 455,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -16.8,
+      "location_y": 22.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 456,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 457,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": -4.5,
+      "location_y": 7.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 458,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": -1.6,
+      "location_y": 4.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 459,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": -15.6,
+      "location_y": 22.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 460,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -2.3,
+      "location_y": -0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 461,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 6.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 462,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": 3.8,
+      "location_y": 3.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 463,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": -8.9,
+      "location_y": 4.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 464,
+    "fields": {
+      "game_player": 58,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 465,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 466,
+    "fields": {
+      "game_player": 58,
+      "is_make": false,
+      "location_x": -1.0,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 467,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": -5.1,
+      "location_y": 4.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 468,
+    "fields": {
+      "game_player": 59,
+      "is_make": true,
+      "location_x": -0.2,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 469,
+    "fields": {
+      "game_player": 59,
+      "is_make": true,
+      "location_x": 1.8,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 470,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": 1.2,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 471,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": 22.9,
+      "location_y": 5.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 472,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": -1.2,
+      "location_y": -0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 473,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": 4.4,
+      "location_y": 21.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 474,
+    "fields": {
+      "game_player": 59,
+      "is_make": true,
+      "location_x": 1.1,
+      "location_y": 1.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 475,
+    "fields": {
+      "game_player": 59,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 476,
+    "fields": {
+      "game_player": 59,
+      "is_make": false,
+      "location_x": 1.8,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 477,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 478,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -23.0,
+      "location_y": 4.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 479,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -0.9,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 480,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -15.4,
+      "location_y": 27.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 481,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 482,
+    "fields": {
+      "game_player": 60,
+      "is_make": true,
+      "location_x": -10.2,
+      "location_y": 26.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 483,
+    "fields": {
+      "game_player": 61,
+      "is_make": false,
+      "location_x": -23.5,
+      "location_y": 4.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 484,
+    "fields": {
+      "game_player": 61,
+      "is_make": true,
+      "location_x": -1.5,
+      "location_y": -1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 485,
+    "fields": {
+      "game_player": 61,
+      "is_make": false,
+      "location_x": -3.4,
+      "location_y": 27.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 486,
+    "fields": {
+      "game_player": 61,
+      "is_make": false,
+      "location_x": 2.8,
+      "location_y": 13.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 487,
+    "fields": {
+      "game_player": 61,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": -0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 488,
+    "fields": {
+      "game_player": 61,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 489,
+    "fields": {
+      "game_player": 61,
+      "is_make": true,
+      "location_x": 2.6,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 490,
+    "fields": {
+      "game_player": 61,
+      "is_make": false,
+      "location_x": 9.7,
+      "location_y": 26.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 491,
+    "fields": {
+      "game_player": 61,
+      "is_make": false,
+      "location_x": 1.8,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 492,
+    "fields": {
+      "game_player": 62,
+      "is_make": false,
+      "location_x": 21.0,
+      "location_y": 13.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 493,
+    "fields": {
+      "game_player": 62,
+      "is_make": true,
+      "location_x": -2.1,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 494,
+    "fields": {
+      "game_player": 62,
+      "is_make": true,
+      "location_x": 7.1,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 495,
+    "fields": {
+      "game_player": 62,
+      "is_make": true,
+      "location_x": 0.2,
+      "location_y": 4.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 496,
+    "fields": {
+      "game_player": 63,
+      "is_make": false,
+      "location_x": 22.3,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 497,
+    "fields": {
+      "game_player": 63,
+      "is_make": false,
+      "location_x": 1.2,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 498,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -2.3,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 499,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 500,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -0.5,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 501,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": 19.5,
+      "location_y": 44.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 502,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 12.9,
+      "location_y": 24.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 503,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": 16.9,
+      "location_y": 22.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 504,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": 11.0,
+      "location_y": 18.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 505,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": 3.9,
+      "location_y": 16.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 506,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 7.7,
+      "location_y": 14.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 507,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -7.8,
+      "location_y": 19.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 508,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": -17.4,
+      "location_y": 22.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 509,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -16.7,
+      "location_y": 18.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 510,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": -20.6,
+      "location_y": 14.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 511,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 2.0,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 512,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 3.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 513,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 1.2,
+      "location_y": 1.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 514,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -3.7,
+      "location_y": 1.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 515,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 516,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": 0.1,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 517,
+    "fields": {
+      "game_player": 64,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 5.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 518,
+    "fields": {
+      "game_player": 64,
+      "is_make": false,
+      "location_x": -2.3,
+      "location_y": 5.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 519,
+    "fields": {
+      "game_player": 65,
+      "is_make": true,
+      "location_x": 12.5,
+      "location_y": 23.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 520,
+    "fields": {
+      "game_player": 65,
+      "is_make": true,
+      "location_x": -10.8,
+      "location_y": 25.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 521,
+    "fields": {
+      "game_player": 65,
+      "is_make": false,
+      "location_x": -1.3,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 522,
+    "fields": {
+      "game_player": 65,
+      "is_make": true,
+      "location_x": -1.2,
+      "location_y": -0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 523,
+    "fields": {
+      "game_player": 65,
+      "is_make": true,
+      "location_x": 1.7,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 524,
+    "fields": {
+      "game_player": 65,
+      "is_make": false,
+      "location_x": 2.7,
+      "location_y": 6.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 525,
+    "fields": {
+      "game_player": 65,
+      "is_make": false,
+      "location_x": 5.4,
+      "location_y": 2.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 526,
+    "fields": {
+      "game_player": 65,
+      "is_make": false,
+      "location_x": -23.4,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 527,
+    "fields": {
+      "game_player": 65,
+      "is_make": false,
+      "location_x": -23.0,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 528,
+    "fields": {
+      "game_player": 66,
+      "is_make": false,
+      "location_x": 12.1,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 529,
+    "fields": {
+      "game_player": 66,
+      "is_make": true,
+      "location_x": -6.9,
+      "location_y": 20.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 530,
+    "fields": {
+      "game_player": 66,
+      "is_make": true,
+      "location_x": -18.8,
+      "location_y": 18.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 531,
+    "fields": {
+      "game_player": 66,
+      "is_make": true,
+      "location_x": -17.5,
+      "location_y": 19.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 532,
+    "fields": {
+      "game_player": 66,
+      "is_make": true,
+      "location_x": 23.3,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 533,
+    "fields": {
+      "game_player": 66,
+      "is_make": false,
+      "location_x": 22.4,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 534,
+    "fields": {
+      "game_player": 66,
+      "is_make": false,
+      "location_x": 23.2,
+      "location_y": 3.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 535,
+    "fields": {
+      "game_player": 66,
+      "is_make": false,
+      "location_x": -1.3,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 536,
+    "fields": {
+      "game_player": 66,
+      "is_make": false,
+      "location_x": 3.6,
+      "location_y": 2.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 537,
+    "fields": {
+      "game_player": 67,
+      "is_make": false,
+      "location_x": -3.8,
+      "location_y": 25.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 538,
+    "fields": {
+      "game_player": 67,
+      "is_make": false,
+      "location_x": 9.7,
+      "location_y": 23.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 539,
+    "fields": {
+      "game_player": 67,
+      "is_make": false,
+      "location_x": 16.9,
+      "location_y": 20.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 540,
+    "fields": {
+      "game_player": 67,
+      "is_make": false,
+      "location_x": 1.0,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 541,
+    "fields": {
+      "game_player": 67,
+      "is_make": false,
+      "location_x": -17.2,
+      "location_y": 19.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 542,
+    "fields": {
+      "game_player": 67,
+      "is_make": true,
+      "location_x": -17.2,
+      "location_y": 19.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 543,
+    "fields": {
+      "game_player": 68,
+      "is_make": false,
+      "location_x": 1.8,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 544,
+    "fields": {
+      "game_player": 68,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 545,
+    "fields": {
+      "game_player": 68,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 1.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 546,
+    "fields": {
+      "game_player": 68,
+      "is_make": false,
+      "location_x": -1.6,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 547,
+    "fields": {
+      "game_player": 68,
+      "is_make": false,
+      "location_x": -1.3,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 548,
+    "fields": {
+      "game_player": 68,
+      "is_make": true,
+      "location_x": 1.6,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 549,
+    "fields": {
+      "game_player": 69,
+      "is_make": false,
+      "location_x": -7.2,
+      "location_y": 10.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 550,
+    "fields": {
+      "game_player": 69,
+      "is_make": false,
+      "location_x": 10.2,
+      "location_y": 1.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 551,
+    "fields": {
+      "game_player": 69,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 552,
+    "fields": {
+      "game_player": 69,
+      "is_make": false,
+      "location_x": -7.4,
+      "location_y": 3.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 553,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": 16.5,
+      "location_y": 23.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 554,
+    "fields": {
+      "game_player": 70,
+      "is_make": false,
+      "location_x": 12.9,
+      "location_y": 9.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 555,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": -3.6,
+      "location_y": 14.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 556,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": 0.5,
+      "location_y": 21.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 557,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": -23.5,
+      "location_y": 9.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 558,
+    "fields": {
+      "game_player": 70,
+      "is_make": false,
+      "location_x": -22.6,
+      "location_y": 7.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 559,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": -22.7,
+      "location_y": 12.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 560,
+    "fields": {
+      "game_player": 70,
+      "is_make": false,
+      "location_x": -21.9,
+      "location_y": 13.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 561,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": 1.7,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 562,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": 0.6,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 563,
+    "fields": {
+      "game_player": 70,
+      "is_make": false,
+      "location_x": 1.1,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 564,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": 5.0,
+      "location_y": 4.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 565,
+    "fields": {
+      "game_player": 70,
+      "is_make": true,
+      "location_x": -6.1,
+      "location_y": 3.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 566,
+    "fields": {
+      "game_player": 71,
+      "is_make": false,
+      "location_x": 18.3,
+      "location_y": 15.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 567,
+    "fields": {
+      "game_player": 71,
+      "is_make": true,
+      "location_x": 16.5,
+      "location_y": 22.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 568,
+    "fields": {
+      "game_player": 71,
+      "is_make": true,
+      "location_x": -16.8,
+      "location_y": 19.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 569,
+    "fields": {
+      "game_player": 71,
+      "is_make": false,
+      "location_x": 22.8,
+      "location_y": 2.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 570,
+    "fields": {
+      "game_player": 71,
+      "is_make": true,
+      "location_x": 1.6,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 571,
+    "fields": {
+      "game_player": 71,
+      "is_make": false,
+      "location_x": -1.6,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 572,
+    "fields": {
+      "game_player": 71,
+      "is_make": false,
+      "location_x": -1.8,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 573,
+    "fields": {
+      "game_player": 71,
+      "is_make": false,
+      "location_x": 6.9,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 574,
+    "fields": {
+      "game_player": 72,
+      "is_make": false,
+      "location_x": 2.0,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 575,
+    "fields": {
+      "game_player": 72,
+      "is_make": false,
+      "location_x": -0.4,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 576,
+    "fields": {
+      "game_player": 72,
+      "is_make": false,
+      "location_x": -20.5,
+      "location_y": 15.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 577,
+    "fields": {
+      "game_player": 72,
+      "is_make": true,
+      "location_x": 1.0,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 578,
+    "fields": {
+      "game_player": 72,
+      "is_make": true,
+      "location_x": -0.7,
+      "location_y": 0.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 579,
+    "fields": {
+      "game_player": 73,
+      "is_make": false,
+      "location_x": 2.7,
+      "location_y": 16.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 580,
+    "fields": {
+      "game_player": 73,
+      "is_make": true,
+      "location_x": -21.9,
+      "location_y": 10.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 581,
+    "fields": {
+      "game_player": 73,
+      "is_make": false,
+      "location_x": -1.2,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 582,
+    "fields": {
+      "game_player": 73,
+      "is_make": true,
+      "location_x": 1.7,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 583,
+    "fields": {
+      "game_player": 74,
+      "is_make": false,
+      "location_x": -17.0,
+      "location_y": 21.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 584,
+    "fields": {
+      "game_player": 74,
+      "is_make": false,
+      "location_x": -12.6,
+      "location_y": 22.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 585,
+    "fields": {
+      "game_player": 74,
+      "is_make": false,
+      "location_x": -21.2,
+      "location_y": 14.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 586,
+    "fields": {
+      "game_player": 74,
+      "is_make": false,
+      "location_x": -1.8,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 587,
+    "fields": {
+      "game_player": 74,
+      "is_make": true,
+      "location_x": 1.7,
+      "location_y": 0.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 588,
+    "fields": {
+      "game_player": 74,
+      "is_make": true,
+      "location_x": -22.3,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 589,
+    "fields": {
+      "game_player": 75,
+      "is_make": false,
+      "location_x": 2.6,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 590,
+    "fields": {
+      "game_player": 75,
+      "is_make": false,
+      "location_x": -22.1,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 591,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": 1.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 592,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": -6.7,
+      "location_y": 26.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 593,
+    "fields": {
+      "game_player": 76,
+      "is_make": true,
+      "location_x": 21.3,
+      "location_y": 13.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 594,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": -20.2,
+      "location_y": 16.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 595,
+    "fields": {
+      "game_player": 76,
+      "is_make": true,
+      "location_x": -20.6,
+      "location_y": 17.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 596,
+    "fields": {
+      "game_player": 76,
+      "is_make": true,
+      "location_x": -19.0,
+      "location_y": 16.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 597,
+    "fields": {
+      "game_player": 76,
+      "is_make": true,
+      "location_x": -18.4,
+      "location_y": 19.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 598,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": -15.4,
+      "location_y": 23.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 599,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": -22.9,
+      "location_y": 8.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 600,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": -19.5,
+      "location_y": 17.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 601,
+    "fields": {
+      "game_player": 76,
+      "is_make": true,
+      "location_x": 23.7,
+      "location_y": 2.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 602,
+    "fields": {
+      "game_player": 76,
+      "is_make": false,
+      "location_x": 1.6,
+      "location_y": 0.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 603,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": -1.8,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 604,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": 7.2,
+      "location_y": 5.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 605,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": -3.6,
+      "location_y": 26.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 606,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": -2.7,
+      "location_y": 15.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 607,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": 15.9,
+      "location_y": 2.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 608,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": 0.7,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 609,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -0.4,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 610,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": 1.3,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 611,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -0.2,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 612,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": 1.7,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 613,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 614,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 615,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": -1.2,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 616,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -1.7,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 617,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -0.9,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 618,
+    "fields": {
+      "game_player": 77,
+      "is_make": false,
+      "location_x": 0.9,
+      "location_y": 2.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 619,
+    "fields": {
+      "game_player": 77,
+      "is_make": true,
+      "location_x": -1.1,
+      "location_y": 7.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 620,
+    "fields": {
+      "game_player": 78,
+      "is_make": false,
+      "location_x": -0.4,
+      "location_y": 8.3
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 621,
+    "fields": {
+      "game_player": 78,
+      "is_make": false,
+      "location_x": 18.5,
+      "location_y": 16.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 622,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": 19.0,
+      "location_y": 18.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 623,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": -23.2,
+      "location_y": 9.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 624,
+    "fields": {
+      "game_player": 78,
+      "is_make": false,
+      "location_x": -21.8,
+      "location_y": 11.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 625,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": -16.3,
+      "location_y": 21.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 626,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": 0.4,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 627,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": 0.6,
+      "location_y": 0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 628,
+    "fields": {
+      "game_player": 78,
+      "is_make": false,
+      "location_x": -0.7,
+      "location_y": 2.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 629,
+    "fields": {
+      "game_player": 78,
+      "is_make": false,
+      "location_x": -2.0,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 630,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": 4.8,
+      "location_y": 5.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 631,
+    "fields": {
+      "game_player": 78,
+      "is_make": true,
+      "location_x": 7.4,
+      "location_y": 5.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 632,
+    "fields": {
+      "game_player": 79,
+      "is_make": false,
+      "location_x": 0.9,
+      "location_y": -0.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 633,
+    "fields": {
+      "game_player": 79,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 634,
+    "fields": {
+      "game_player": 79,
+      "is_make": false,
+      "location_x": 8.0,
+      "location_y": 12.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 635,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -16.2,
+      "location_y": 20.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 636,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -14.7,
+      "location_y": 23.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 637,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -0.5,
+      "location_y": 0.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 638,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": 0.4,
+      "location_y": 1.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 639,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": 0.6,
+      "location_y": 0.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 640,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 1.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 641,
+    "fields": {
+      "game_player": 79,
+      "is_make": false,
+      "location_x": -0.2,
+      "location_y": 2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 642,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -0.6,
+      "location_y": 0.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 643,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -1.2,
+      "location_y": 5.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 644,
+    "fields": {
+      "game_player": 79,
+      "is_make": false,
+      "location_x": -1.7,
+      "location_y": 5.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 645,
+    "fields": {
+      "game_player": 79,
+      "is_make": true,
+      "location_x": -19.9,
+      "location_y": -2.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 646,
+    "fields": {
+      "game_player": 80,
+      "is_make": true,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 647,
+    "fields": {
+      "game_player": 80,
+      "is_make": false,
+      "location_x": 12.1,
+      "location_y": 22.2
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 648,
+    "fields": {
+      "game_player": 80,
+      "is_make": false,
+      "location_x": 20.2,
+      "location_y": 15.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 649,
+    "fields": {
+      "game_player": 80,
+      "is_make": false,
+      "location_x": 14.5,
+      "location_y": 21.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 650,
+    "fields": {
+      "game_player": 80,
+      "is_make": true,
+      "location_x": -7.1,
+      "location_y": 8.8
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 651,
+    "fields": {
+      "game_player": 80,
+      "is_make": false,
+      "location_x": 2.2,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 652,
+    "fields": {
+      "game_player": 80,
+      "is_make": false,
+      "location_x": 0.7,
+      "location_y": 1.4
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 653,
+    "fields": {
+      "game_player": 80,
+      "is_make": true,
+      "location_x": -0.2,
+      "location_y": 0.6
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 654,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 0.0,
+      "location_y": 0.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 655,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": -2.7,
+      "location_y": 1.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 656,
+    "fields": {
+      "game_player": 81,
+      "is_make": true,
+      "location_x": -0.1,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 657,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 12.3,
+      "location_y": 25.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 658,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 10.4,
+      "location_y": 26.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 659,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 9.9,
+      "location_y": 24.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 660,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 1.3,
+      "location_y": 8.9
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 661,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 0.1,
+      "location_y": 8.7
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 662,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": -16.3,
+      "location_y": 21.5
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 663,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 23.4,
+      "location_y": 5.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 664,
+    "fields": {
+      "game_player": 81,
+      "is_make": true,
+      "location_x": -1.3,
+      "location_y": -0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 665,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": 2.3,
+      "location_y": 4.0
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 666,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": -4.0,
+      "location_y": 0.1
+    }
+  },
+  {
+    "model": "app.Shot",
+    "pk": 667,
+    "fields": {
+      "game_player": 81,
+      "is_make": false,
+      "location_x": -22.8,
+      "location_y": 0.4
+    }
+  }
+]

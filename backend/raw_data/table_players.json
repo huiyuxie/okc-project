@@ -1,0 +1,250 @@
+[
+  {
+    "model": "app.Player",
+    "pk": 1,
+    "fields": {
+      "name": "Michael Jordan",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 2,
+    "fields": {
+      "name": "Tweety",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 3,
+    "fields": {
+      "name": "Bugs Bunny",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 4,
+    "fields": {
+      "name": "Daffy Duck",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 5,
+    "fields": {
+      "name": "Sniffles",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 6,
+    "fields": {
+      "name": "Yosemite Sam",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 7,
+    "fields": {
+      "name": "Road Runner",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 8,
+    "fields": {
+      "name": "Porky Pig",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 9,
+    "fields": {
+      "name": "Sylvester",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 10,
+    "fields": {
+      "name": "Lola Bunny",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 11,
+    "fields": {
+      "name": "Wile E. Coyote",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 12,
+    "fields": {
+      "name": "Bill Murray",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 13,
+    "fields": {
+      "name": "Barnyard Dawg",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 14,
+    "fields": {
+      "name": "Tasmanian Devil",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 15,
+    "fields": {
+      "name": "Foghorn Leghorn",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 16,
+    "fields": {
+      "name": "Elmer Fudd",
+      "team": 2
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 17,
+    "fields": {
+      "name": "Monstar 1",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 18,
+    "fields": {
+      "name": "Monstar 2",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 19,
+    "fields": {
+      "name": "Monstar 3",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 20,
+    "fields": {
+      "name": "Monstar 4",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 21,
+    "fields": {
+      "name": "Monstar 5",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 22,
+    "fields": {
+      "name": "Monstar 6",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 23,
+    "fields": {
+      "name": "Monstar 7",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 24,
+    "fields": {
+      "name": "Monstar 8",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 25,
+    "fields": {
+      "name": "Monstar 9",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 26,
+    "fields": {
+      "name": "Monstar 10",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 27,
+    "fields": {
+      "name": "Monstar 11",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 28,
+    "fields": {
+      "name": "Monstar 12",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 29,
+    "fields": {
+      "name": "Monstar 13",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 30,
+    "fields": {
+      "name": "Monstar 14",
+      "team": 1
+    }
+  },
+  {
+    "model": "app.Player",
+    "pk": 31,
+    "fields": {
+      "name": "Monstar 15",
+      "team": 1
+    }
+  }
+]

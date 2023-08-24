@@ -1,0 +1,16 @@
+[
+  {
+    "model": "app.Team",
+    "pk": 1,
+    "fields": {
+      "name": "Tune Squad"
+    }
+  },
+  {
+    "model": "app.Team",
+    "pk": 2,
+    "fields": {
+      "name": "Monstars"
+    }
+  }
+]
