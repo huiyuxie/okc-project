@@ -29,7 +29,7 @@ class Game(models.Model):
         Team, on_delete=models.CASCADE, related_name='away_games')
 
     def __str__(self):
-        return f"{self.home_team_id} vs {self.away_team_ida} on {self.date}"
+        return f"{self.home_team_id} vs {self.away_team_id} on {self.date}"
 
 
 class GamePlayer(models.Model):
