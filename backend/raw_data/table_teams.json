@@ -3,14 +3,14 @@
     "model": "app.Team",
     "pk": 1,
     "fields": {
-      "name": "Tune Squad"
+      "team_name": "Tune Squad"
     }
   },
   {
     "model": "app.Team",
     "pk": 2,
     "fields": {
-      "name": "Monstars"
+      "team_name": "Monstars"
     }
   }
 ]

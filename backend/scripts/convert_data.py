@@ -11,7 +11,7 @@ for team in original_data:
         "model": "app.Team",
         "pk": team["id"],
         "fields": {
-            "name": team["name"]
+            "team_name": team["name"]
         }
     }
     converted_data.append(converted_item)
@@ -41,8 +41,8 @@ for player in original_data:
         "model": "app.Player",
         "pk": player["id"],
         "fields": {
-            "name": player["name"],
-            "team": team_id
+            "player_name": player["name"],
+            "team_id": team_id
         }
     }
     converted_data.append(converted_item)
@@ -62,8 +62,8 @@ for game in original_data:
         "pk": game["id"],
         "fields": {
             "date": game["date"],
-            "home_team": game["homeTeam"]["id"],
-            "away_team": game["awayTeam"]["id"]
+            "home_team_id": game["homeTeam"]["id"],
+            "away_team_id": game["awayTeam"]["id"]
         }
     }
     converted_data.append(converted_item)
@@ -88,8 +88,8 @@ for game in original_data:
             "model": "app.GamePlayer",
             "pk": pk_counter,
             "fields": {
-                "game": game["id"],
-                "player": player["id"],
+                "game_id": game["id"],
+                "player_id": player["id"],
                 "is_starter": player["isStarter"],
                 "minutes": player["minutes"],
                 "points": player["points"],
@@ -136,7 +136,7 @@ for game in original_data:
                 "model": "app.Shot",
                 "pk": pk_counter,
                 "fields": {
-                    "game_player": fk_counter,
+                    "game_player_id": fk_counter,
                     "is_make": shot["isMake"],
                     "location_x": shot["locationX"],
                     "location_y": shot["locationY"]

@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
       "date": "2022-12-19",
-      "home_team": 1,
-      "away_team": 2
+      "home_team_id": 1,
+      "away_team_id": 2
     }
   },
   {
@@ -13,8 +13,8 @@
     "pk": 2,
     "fields": {
       "date": "2022-12-21",
-      "home_team": 1,
-      "away_team": 2
+      "home_team_id": 1,
+      "away_team_id": 2
     }
   },
   {
@@ -22,8 +22,8 @@
     "pk": 3,
     "fields": {
       "date": "2023-02-10",
-      "home_team": 2,
-      "away_team": 1
+      "home_team_id": 2,
+      "away_team_id": 1
     }
   },
   {
@@ -31,8 +31,8 @@
     "pk": 4,
     "fields": {
       "date": "2023-03-26",
-      "home_team": 2,
-      "away_team": 1
+      "home_team_id": 2,
+      "away_team_id": 1
     }
   }
 ]
