@@ -15,3 +15,27 @@ There are five primary tables in the `app` schema, specifically `Team`, `Player`
 - **GamePlayer Table**: Represents the specific data for a player in a particular game. It contains an auto-incrementing ID (Primary Key), and it's uniquely identified by a combination of game ID (from `Game` table) and player ID (from `Player` table) as foreign keys. This table includes details such as points, rebounds, assists, and other game-specific statistics, providing an individualized snapshot of a player's performance in a game.
 
 - **Shot Table**: Tracks individual shots taken by players during a game. It contains a shot ID (Primary Key) and a foreign key reference to the `GamePlayer` table, linking each shot to a specific player's game record. Key attributes include whether the shot was made (`is_make`) and its location on the court (`location_x` and `location_y`). This table serves as a detailed log of all shots attempted, enriching the statistical analysis of player performance.
+
+## Visual Representation
+
+### Simple Structure
+
+```Lua
+okc (Database)
+    |
+    |---> app (Schema)
+          |
+          |---> Team (Table)
+          |
+          |---> Player (Table)
+          |
+          |---> Game (Table)
+          |
+          |---> GamePlayer (Table)
+          |
+          |---> Shot (Table)
+```
+
+### Relational Schemas
+
+![Schemas](./schemas.png)
