@@ -1,26 +1,78 @@
-<div *ngIf="playerSummary" id="player-container">
-  <mat-card>
-    <mat-card-title>{{ playerSummary.name }}</mat-card-title>
+<div class="container">
+  <h2>Please select the player ID</h2>
+  <div>
+    <mat-form-field>
+      <mat-select
+        [(ngModel)]="selectedPlayerID"
+        [ngModelOptions]="{ standalone: true }"
+        (selectionChange)="fetchPlayerData($event.value)"
+      >
+        <mat-option
+          *ngFor="let _ of [].constructor(31); let i = index"
+          [value]="i + 1"
+        >
+          {{ i + 1 }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
-    <mat-tab-group>
-      <mat-tab *ngFor="let game of playerSummary.games" label="{{ game.date }}">
-        <div class="game-stats">
-          <p><strong>Minutes:</strong> {{ game.minutes }}</p>
-          <p><strong>Points:</strong> {{ game.points }}</p>
-          <p><strong>Assists:</strong> {{ game.assists }}</p>
-          <!-- ... add other stats as required ... -->
+  <div *ngIf="playerSummary" id="player-container">
+    <mat-card>
+      <mat-card-title>{{ playerSummary.name }}</mat-card-title>
 
-          <div class="shots-stats">
-            <h4>Shots</h4>
-            <ul>
-              <li *ngFor="let shot of game.shots">
-                Location: ({{ shot.locationX }}, {{ shot.locationY }}) -
-                {{ shot.isMake ? "Made" : "Missed" }}
-              </li>
-            </ul>
+      <mat-tab-group>
+        <mat-tab
+          *ngFor="let game of playerSummary.games"
+          label="{{ game.date }}"
+        >
+          <div class="game-stats">
+            <p><strong>Minutes:</strong> {{ game.minutes }}</p>
+            <p><strong>Points:</strong> {{ game.points }}</p>
+            <p><strong>Assists:</strong> {{ game.assists }}</p>
+            <p>
+              <strong>Offensive Rebounds:</strong> {{ game.offensiveRebounds }}
+            </p>
+            <p>
+              <strong>Defensive Rebounds:</strong> {{ game.defensiveRebounds }}
+            </p>
+            <p><strong>Steals:</strong> {{ game.steals }}</p>
+            <p><strong>Blocks:</strong> {{ game.blocks }}</p>
+            <p><strong>Turnovers:</strong> {{ game.turnovers }}</p>
+            <p><strong>Defensive Fouls:</strong> {{ game.defensiveFouls }}</p>
+            <p><strong>Offensive Fouls:</strong> {{ game.offensiveFouls }}</p>
+            <p><strong>Free Throws Made:</strong> {{ game.freeThrowsMade }}</p>
+            <p>
+              <strong>Free Throws Attempted:</strong>
+              {{ game.freeThrowsAttempted }}
+            </p>
+            <p>
+              <strong>Two Pointers Made:</strong> {{ game.twoPointersMade }}
+            </p>
+            <p>
+              <strong>Two Pointers Attempted:</strong>
+              {{ game.twoPointersAttempted }}
+            </p>
+            <p>
+              <strong>Three Pointers Made:</strong> {{ game.threePointersMade }}
+            </p>
+            <p>
+              <strong>Three Pointers Attempted:</strong>
+              {{ game.threePointersAttempted }}
+            </p>
+
+            <div class="shots-stats">
+              <h4><strong>Shots</strong></h4>
+              <ul>
+                <li *ngFor="let shot of game.shots">
+                  Location: ({{ shot.locationX }}, {{ shot.locationY }}) -
+                  {{ shot.isMake ? "Made" : "Missed" }}
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
-  </mat-card>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
 </div>

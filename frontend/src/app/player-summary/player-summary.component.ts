@@ -5,10 +5,11 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
 import { PlayersService } from '../_services/players.service';
 import { PlayerSummary } from '../_models/player-summary.model';
+import { switchMap } from 'rxjs';
 
 @UntilDestroy()
 @Component({
@@ -18,7 +19,8 @@ import { PlayerSummary } from '../_models/player-summary.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
-  public playerSummary: PlayerSummary;
+  public playerSummary: PlayerSummary | null = null;
+  public selectedPlayerID: number | null = null;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
@@ -27,19 +29,27 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.playersService
-      .getPlayerSummary(1)
-      .pipe(untilDestroyed(this))
-      .subscribe(
-        (data: PlayerSummary) => {
-          console.log('About to set playerSummary with:', data);
-          this.playerSummary = data;
-          console.log('playerSummary is now:', this.playerSummary);
-        },
-        (error) => {
-          console.error('Error fetching player summary:', error);
-        }
-      );
+    this.fetchPlayerData(this.selectedPlayerID);
+  }
+
+  fetchPlayerData(playerID: number): void {
+    if (playerID !== null) {
+      this.playersService
+        .getPlayerSummary(playerID)
+        .pipe(untilDestroyed(this))
+        .subscribe(
+          (data: PlayerSummary) => {
+            this.playerSummary = data;
+          },
+          (error) => {
+            console.error('Error fetching player summary:', error);
+          }
+        );
+    }
+  }
+
+  onPlayerSelectionChange(): void {
+    this.fetchPlayerData(this.selectedPlayerID);
   }
 
   ngOnDestroy() {}
