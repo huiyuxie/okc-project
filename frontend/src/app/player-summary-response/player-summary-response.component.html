@@ -1,8 +1,16 @@
 <h1>Player Summary Response Page</h1>
 <div>
   <mat-form-field>
-    <mat-select [(ngModel)]="playerID" [ngModelOptions]="{standalone: true}" (selectionChange)="changeParams()">
-      <mat-option *ngFor="let _ of [].constructor(31); let i = index" [value]="i + 1">{{ i + 1}}</mat-option>
+    <mat-select
+      [(ngModel)]="playerID"
+      [ngModelOptions]="{ standalone: true }"
+      (selectionChange)="changeParams()"
+    >
+      <mat-option
+        *ngFor="let _ of [].constructor(31); let i = index"
+        [value]="i + 1"
+        >{{ i + 1 }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
 </div>

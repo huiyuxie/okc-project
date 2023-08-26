@@ -1,9 +1,26 @@
-<div class="placeholder">Place your content here!
+<div *ngIf="playerSummary" id="player-container">
+  <mat-card>
+    <mat-card-title>{{ playerSummary.name }}</mat-card-title>
 
-<div *ngIf="playerSummary">
-    <p>{{ playerSummary.name}}</p>
-    <p>{{ playerSummary.game}}</p>
-    <!-- ... other code ... -->
-</div>
+    <mat-tab-group>
+      <mat-tab *ngFor="let game of playerSummary.games" label="{{ game.date }}">
+        <div class="game-stats">
+          <p><strong>Minutes:</strong> {{ game.minutes }}</p>
+          <p><strong>Points:</strong> {{ game.points }}</p>
+          <p><strong>Assists:</strong> {{ game.assists }}</p>
+          <!-- ... add other stats as required ... -->
 
+          <div class="shots-stats">
+            <h4>Shots</h4>
+            <ul>
+              <li *ngFor="let shot of game.shots">
+                Location: ({{ shot.locationX }}, {{ shot.locationY }}) -
+                {{ shot.isMake ? "Made" : "Missed" }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
 </div>

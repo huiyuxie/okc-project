@@ -6,3 +6,16 @@ player-summary-component {
     justify-content: center;
   }
 }
+
+#player-container {
+  width: 80%;
+  margin: 0 auto;
+  .game-stats {
+    padding: 16px;
+  }
+  .shots {
+    h4 {
+      margin-top: 16px;
+    }
+  }
+}

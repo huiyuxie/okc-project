@@ -3,11 +3,11 @@ import {
   Component,
   OnDestroy,
   OnInit,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {untilDestroyed, UntilDestroy} from '@ngneat/until-destroy';
-import {PlayersService} from '../_services/players.service';
+import { ActivatedRoute } from '@angular/router';
+import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
+import { PlayersService } from '../_services/players.service';
 import { PlayerSummary } from '../_models/player-summary.model';
 
 @UntilDestroy()
@@ -18,31 +18,29 @@ import { PlayerSummary } from '../_models/player-summary.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
-
   public playerSummary: PlayerSummary;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
     protected cdr: ChangeDetectorRef,
-    protected playersService: PlayersService,
-  ) {
-
-  }
+    protected playersService: PlayersService
+  ) {}
 
   ngOnInit(): void {
-    this.playersService.getPlayerSummary(1).pipe(untilDestroyed(this)).subscribe(
-      (data: PlayerSummary) => {
-        console.log('About to set playerSummary with:', data);
-        this.playerSummary = data;
-        console.log('playerSummary is now:', this.playerSummary);
-      },
-      (error) => {
-        console.error('Error fetching player summary:', error);
-      }
-    );
-    }
-    
-  ngOnDestroy() {
+    this.playersService
+      .getPlayerSummary(1)
+      .pipe(untilDestroyed(this))
+      .subscribe(
+        (data: PlayerSummary) => {
+          console.log('About to set playerSummary with:', data);
+          this.playerSummary = data;
+          console.log('playerSummary is now:', this.playerSummary);
+        },
+        (error) => {
+          console.error('Error fetching player summary:', error);
+        }
+      );
   }
 
+  ngOnDestroy() {}
 }
