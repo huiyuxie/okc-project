@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Run command `cd /path/to/project/backend` if that is not your current directory
-
 # Run command `./scripts/load_data.sh` to run the whole shell script
+
 export DATABASE_URL=postgresql://okcapplicant:thunder@localhost:5432/okc
 
 python manage.py makemigrations

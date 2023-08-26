@@ -1,1 +1,9 @@
-<div class="placeholder">Place your content here!</div>
+<div class="placeholder">Place your content here!
+
+<div *ngIf="playerSummary">
+    <p>{{ playerSummary.name}}</p>
+    <p>{{ playerSummary.game}}</p>
+    <!-- ... other code ... -->
+</div>
+
+</div>

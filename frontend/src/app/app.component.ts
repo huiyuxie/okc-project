@@ -15,6 +15,7 @@ enum Tab {
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
+  title = 'frontend';
   readonly tab = Tab;
   currentTab: number = Tab.FRONTEND;
   
