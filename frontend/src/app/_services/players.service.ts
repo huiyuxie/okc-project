@@ -21,6 +21,7 @@ export class PlayersService extends BaseService {
       map((data: any) => {
         return {
           name: data.name,
+          team: data.team,
           games: data.games.map((game: any) => ({
             date: game.date,
             isStarter: game.isStarter,

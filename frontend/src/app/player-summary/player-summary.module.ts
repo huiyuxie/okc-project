@@ -14,10 +14,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlayersService } from '../_services/players.service';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [PlayerSummaryComponent],
   imports: [
+    NgxChartsModule,
     CommonModule,
     routing,
     MatToolbarModule,

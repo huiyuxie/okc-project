@@ -21,6 +21,7 @@ import { switchMap } from 'rxjs';
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
   public playerSummary: PlayerSummary | null = null;
   public selectedPlayerID: number | null = null;
+  public barChartData: any[];
 
   constructor(
     protected activatedRoute: ActivatedRoute,
@@ -32,6 +33,16 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
+  // Could be optimized by changing the return object from the frontend
+  getTeamName(playerID: number): string {
+    if (playerID <= 16) {
+      return 'Monstars';
+    } else if (playerID >= 17) {
+      return 'Tune Squad';
+    }
+    return '';
+  }
+
   fetchPlayerData(playerID: number): void {
     if (playerID !== null) {
       this.playersService
@@ -40,6 +51,14 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
         .subscribe(
           (data: PlayerSummary) => {
             this.playerSummary = data;
+            this.playerSummary.team = this.getTeamName(playerID);
+
+            if (this.playerSummary) {
+              this.barChartData = this.playerSummary.games.map((game) => ({
+                name: game.date,
+                value: game.points,
+              }));
+            }
           },
           (error) => {
             console.error('Error fetching player summary:', error);

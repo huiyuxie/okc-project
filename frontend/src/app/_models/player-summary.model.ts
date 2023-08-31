@@ -1,5 +1,6 @@
 export interface PlayerSummary {
   name: string;
+  team: string;
   games: Game[];
 }
 
