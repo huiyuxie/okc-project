@@ -8,6 +8,11 @@ const routes: Routes = [
     component: PlayerSummaryComponent,
     data: { title: 'Player Summary' },
   },
+  {
+    path: 'player-summary/:id',
+    component: PlayerSummaryComponent,
+    data: { title: 'Player Summary' },
+  },
 ];
 
 export const routing: ModuleWithProviders<RouterModule> =

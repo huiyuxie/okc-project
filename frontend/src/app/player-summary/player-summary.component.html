@@ -5,7 +5,7 @@
       <mat-select
         [(ngModel)]="selectedPlayerID"
         [ngModelOptions]="{ standalone: true }"
-        (selectionChange)="fetchPlayerData($event.value)"
+        (selectionChange)="onPlayerSelectionChange()"
       >
         <mat-option
           *ngFor="let _ of [].constructor(31); let i = index"
@@ -37,119 +37,161 @@
     <div class="game-details-container">
       <mat-card class="game-data-card">
         <mat-card-title>Game Data</mat-card-title>
-        <mat-tab-group>
-          <mat-tab
-            *ngFor="let game of playerSummary.games"
-            label="{{ game.date }}"
-          >
-            <div class="game-stats">
-              <div class="stats-column">
-                <p><strong>Minutes:</strong> {{ game.minutes }}</p>
-                <p><strong>Points:</strong> {{ game.points }}</p>
-                <p><strong>Assists:</strong> {{ game.assists }}</p>
-                <p>
-                  <strong>Offensive Rebounds:</strong>
-                  {{ game.offensiveRebounds }}
-                </p>
-                <p>
-                  <strong>Defensive Rebounds:</strong>
-                  {{ game.defensiveRebounds }}
-                </p>
-                <p><strong>Steals:</strong> {{ game.steals }}</p>
-                <p><strong>Blocks:</strong> {{ game.blocks }}</p>
-                <p><strong>Turnovers:</strong> {{ game.turnovers }}</p>
-                <p>
-                  <strong>Defensive Fouls:</strong> {{ game.defensiveFouls }}
-                </p>
-                <p>
-                  <strong>Offensive Fouls:</strong> {{ game.offensiveFouls }}
-                </p>
-                <p>
-                  <strong>Free Throws Made:</strong> {{ game.freeThrowsMade }}
-                </p>
-                <p>
-                  <strong>Free Throws Attempted:</strong>
-                  {{ game.freeThrowsAttempted }}
-                </p>
-                <p>
-                  <strong>Two Pointers Made:</strong> {{ game.twoPointersMade }}
-                </p>
-                <p>
-                  <strong>Two Pointers Attempted:</strong>
-                  {{ game.twoPointersAttempted }}
-                </p>
-                <p>
-                  <strong>Three Pointers Made:</strong>
-                  {{ game.threePointersMade }}
-                </p>
-                <p>
-                  <strong>Three Pointers Attempted:</strong>
-                  {{ game.threePointersAttempted }}
-                </p>
-              </div>
+        <mat-card-content>
+          <mat-tab-group>
+            <mat-tab
+              *ngFor="let game of playerSummary.games"
+              label="{{ game.date }}"
+            >
+              <div class="game-stats">
+                <div class="stats-column">
+                  <p><strong>Minutes:</strong> {{ game.minutes }}</p>
+                  <p><strong>Points:</strong> {{ game.points }}</p>
+                  <p><strong>Assists:</strong> {{ game.assists }}</p>
+                  <p>
+                    <strong>Offensive Rebounds:</strong>
+                    {{ game.offensiveRebounds }}
+                  </p>
+                  <p>
+                    <strong>Defensive Rebounds:</strong>
+                    {{ game.defensiveRebounds }}
+                  </p>
+                  <p><strong>Steals:</strong> {{ game.steals }}</p>
+                  <p><strong>Blocks:</strong> {{ game.blocks }}</p>
+                  <p><strong>Turnovers:</strong> {{ game.turnovers }}</p>
+                  <p>
+                    <strong>Defensive Fouls:</strong> {{ game.defensiveFouls }}
+                  </p>
+                  <p>
+                    <strong>Offensive Fouls:</strong> {{ game.offensiveFouls }}
+                  </p>
+                  <p>
+                    <strong>Free Throws Made:</strong> {{ game.freeThrowsMade }}
+                  </p>
+                  <p>
+                    <strong>Free Throws Attempted:</strong>
+                    {{ game.freeThrowsAttempted }}
+                  </p>
+                  <p>
+                    <strong>Two Pointers Made:</strong>
+                    {{ game.twoPointersMade }}
+                  </p>
+                  <p>
+                    <strong>Two Pointers Attempted:</strong>
+                    {{ game.twoPointersAttempted }}
+                  </p>
+                  <p>
+                    <strong>Three Pointers Made:</strong>
+                    {{ game.threePointersMade }}
+                  </p>
+                  <p>
+                    <strong>Three Pointers Attempted:</strong>
+                    {{ game.threePointersAttempted }}
+                  </p>
+                </div>
 
-              <div class="stats-column">
-                <div class="shots-stats">
-                  <strong>Shots</strong>
-                  <li *ngFor="let shot of game.shots">
-                    Location: ({{ shot.locationX }}, {{ shot.locationY }}) -
-                    {{ shot.isMake ? "Made" : "Missed" }}
-                  </li>
+                <div class="stats-column">
+                  <div class="shots-stats">
+                    <strong>Shots</strong>
+                    <li *ngFor="let shot of game.shots">
+                      Location: ({{ shot.locationX }}, {{ shot.locationY }}) -
+                      {{ shot.isMake ? "Made" : "Missed" }}
+                    </li>
+                  </div>
                 </div>
               </div>
-            </div>
-          </mat-tab>
-        </mat-tab-group>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
       </mat-card>
 
       <mat-card class="game-summary-card">
         <mat-card-title>Game Summary</mat-card-title>
         <mat-card-content>
-          <ngx-charts-bar-vertical
-            *ngIf="barChartData"
-            [results]="barChartData"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            xAxisLabel="Game Date"
-            yAxisLabel="Points"
-          ></ngx-charts-bar-vertical>
-        </mat-card-content>
-        <div class="table-container">
-          <table *ngIf="playerSummary && playerSummary.games">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Free Throw %</th>
-                <th>Two Pointers %</th>
-                <th>Three Pointers %</th>
-                <th>Overall Shot %</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let game of playerSummary.games">
-                <td>{{ game.date }}</td>
-                <td>
-                  {{
+          <div class="court-diagram">
+            <hr />
+            <p>
+              <strong>Shot Plot</strong>
+            </p>
+            <svg id="shotChart" width="500" height="500"></svg>
+          </div>
+          <p></p>
+          <hr />
+          <p>
+            <strong>Shot Accuracy</strong>
+          </p>
+
+          <div
+            class="progress-bar-container"
+            *ngIf="playerSummary && playerSummary.games"
+          >
+            <ng-container *ngFor="let game of playerSummary.games">
+              <div>
+                <strong
+                  ><span>{{ game.date }}</span></strong
+                >
+              </div>
+              <div>
+                <span>Free Throw Percentage:</span>
+                <progress
+                  max="100"
+                  value="{{
+                    (game.freeThrowsMade / game.freeThrowsAttempted) * 100
+                  }}"
+                ></progress>
+                <span
+                  >{{
                     (game.freeThrowsMade / game.freeThrowsAttempted) * 100
                       | number : "1.0-0"
-                  }}%
-                </td>
-                <td>
-                  {{
+                  }}%</span
+                >
+              </div>
+              <div>
+                <span>Two Pointers Percentage:</span>
+                <progress
+                  max="100"
+                  value="{{
+                    (game.twoPointersMade / game.twoPointersAttempted) * 100
+                  }}"
+                ></progress>
+                <span
+                  >{{
                     (game.twoPointersMade / game.twoPointersAttempted) * 100
                       | number : "1.0-0"
-                  }}%
-                </td>
-                <td>
-                  {{
+                  }}%</span
+                >
+              </div>
+              <div>
+                <span>Three Pointers Percentage:</span>
+                <progress
+                  max="100"
+                  value="{{
+                    (game.threePointersMade / game.threePointersAttempted) * 100
+                  }}"
+                ></progress>
+                <span
+                  >{{
                     (game.threePointersMade / game.threePointersAttempted) * 100
                       | number : "1.0-0"
-                  }}%
-                </td>
-                <td>
-                  {{
+                  }}%</span
+                >
+              </div>
+              <div>
+                <span>Overall Shot Percentage:</span>
+                <progress
+                  max="100"
+                  value="{{
+                    ((game.freeThrowsMade +
+                      game.twoPointersMade +
+                      game.threePointersMade) /
+                      (game.freeThrowsAttempted +
+                        game.twoPointersAttempted +
+                        game.threePointersAttempted)) *
+                      100
+                  }}"
+                ></progress>
+                <span
+                  >{{
                     ((game.freeThrowsMade +
                       game.twoPointersMade +
                       game.threePointersMade) /
@@ -157,12 +199,13 @@
                         game.twoPointersAttempted +
                         game.threePointersAttempted)) *
                       100 | number : "1.0-0"
-                  }}%
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                  }}%</span
+                >
+                <p></p>
+              </div>
+            </ng-container>
+          </div>
+        </mat-card-content>
       </mat-card>
     </div>
   </div>

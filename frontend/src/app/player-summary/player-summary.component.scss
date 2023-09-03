@@ -17,12 +17,20 @@
     max-width: 300px;
   }
 
+  #shotChart {
+    width: 500px;
+    height: 470px;
+    background: url("/assets/court_diagram.jpg") no-repeat;
+    background-size: cover;
+  }
+
   #player-container {
     margin-bottom: 20px;
 
     mat-card {
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      margin-top: 10px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -30,30 +38,47 @@
         margin-top: 0;
         font-size: 20px;
         font-weight: 600;
+        color: #007ac1;
       }
 
       mat-card-content {
         padding-top: 10px;
         padding-left: 0;
+        margin-left: 10px;
       }
     }
 
     .game-details-container {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      width: 90%;
       gap: 20px;
 
       .game-data-card {
-        flex: 1;
-        width: 40%;
+        flex: 2;
+        width: 50%;
         box-sizing: border-box;
       }
       .game-summary-card {
         flex: 2;
-        width: 60%;
+        width: 50%;
         box-sizing: border-box;
       }
+    }
+
+    .progress-bar-container {
+      width: 80%;
+      margin: 0px;
+    }
+
+    progress {
+      width: 60%;
+      margin-right: 15px;
+    }
+
+    span {
+      font-size: 14px;
+      margin-right: 10px;
     }
 
     .table-container {
@@ -94,13 +119,13 @@
     .player-name-card {
       margin-bottom: 20px;
       padding: 20px;
-      width: 45%;
+      width: 40%;
     }
 
     .player-summary-card {
       margin-bottom: 20px;
       padding: 20px;
-      width: 45%;
+      width: 40%;
     }
 
     .game-stats {

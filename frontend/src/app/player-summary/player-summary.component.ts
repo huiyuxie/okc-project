@@ -5,11 +5,12 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
 import { PlayersService } from '../_services/players.service';
 import { PlayerSummary } from '../_models/player-summary.model';
 import { switchMap } from 'rxjs';
+import * as d3 from 'd3';
 
 @UntilDestroy()
 @Component({
@@ -23,7 +24,17 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   public selectedPlayerID: number | null = null;
   public barChartData: any[];
 
+  public overallFreeThrowsMade: number = 0;
+  public overallFreeThrowsAttempted: number = 0;
+
+  public overallTwoPointersMade: number = 0;
+  public overallTwoPointersAttempted: number = 0;
+
+  public overallThreePointersMade: number = 0;
+  public overallThreePointersAttempted: number = 0;
+
   constructor(
+    protected router: Router,
     protected activatedRoute: ActivatedRoute,
     protected cdr: ChangeDetectorRef,
     protected playersService: PlayersService
@@ -33,14 +44,41 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
-  // Could be optimized by changing the return object from the frontend
-  getTeamName(playerID: number): string {
+  getTeam(playerID: number): string {
     if (playerID <= 16) {
       return 'Monstars';
     } else if (playerID >= 17) {
       return 'Tune Squad';
     }
     return '';
+  }
+
+  drawShots() {
+    const svg = d3.select('#shotChart');
+    svg.selectAll('*').remove();
+
+    const hoopX = 248;
+    const hoopY = 416;
+    const scaleX = 10;
+    const scaleY = 10;
+
+    if (this.playerSummary && this.playerSummary.games) {
+      this.playerSummary.games.forEach((game) => {
+        if (game.shots) {
+          game.shots.forEach((shot) => {
+            const shotX = hoopX + shot.locationX * scaleX;
+            const shotY = hoopY - shot.locationY * scaleY;
+
+            svg
+              .append('circle')
+              .attr('cx', shotX)
+              .attr('cy', shotY)
+              .attr('r', 5)
+              .style('fill', shot.isMake ? 'green' : 'red');
+          });
+        }
+      });
+    }
   }
 
   fetchPlayerData(playerID: number): void {
@@ -51,13 +89,16 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
         .subscribe(
           (data: PlayerSummary) => {
             this.playerSummary = data;
-            this.playerSummary.team = this.getTeamName(playerID);
+            this.playerSummary.team = this.getTeam(playerID);
 
             if (this.playerSummary) {
               this.barChartData = this.playerSummary.games.map((game) => ({
                 name: game.date,
                 value: game.points,
               }));
+
+              this.cdr.detectChanges();
+              this.drawShots();
             }
           },
           (error) => {
