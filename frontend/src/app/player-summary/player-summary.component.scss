@@ -29,7 +29,7 @@
 
     mat-card {
       padding: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       margin-top: 10px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -59,7 +59,7 @@
         width: 50%;
         box-sizing: border-box;
       }
-      .game-summary-card {
+      .game-plot-card {
         flex: 2;
         width: 50%;
         box-sizing: border-box;
@@ -67,8 +67,14 @@
     }
 
     .progress-bar-container {
-      width: 80%;
-      margin: 0px;
+      width: 90%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+
+      .stats-column {
+        width: 40%;
+      }
     }
 
     progress {
@@ -119,13 +125,13 @@
     .player-name-card {
       margin-bottom: 20px;
       padding: 20px;
-      width: 40%;
+      width: 60%;
     }
 
     .player-summary-card {
       margin-bottom: 20px;
       padding: 20px;
-      width: 40%;
+      width: 60%;
     }
 
     .game-stats {

@@ -22,16 +22,18 @@ import * as d3 from 'd3';
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
   public playerSummary: PlayerSummary | null = null;
   public selectedPlayerID: number | null = null;
-  public barChartData: any[];
 
-  public overallFreeThrowsMade: number = 0;
-  public overallFreeThrowsAttempted: number = 0;
+  public totalFreeThrowsMade: number = 0;
+  public totalFreeThrowsAttempted: number = 0;
 
-  public overallTwoPointersMade: number = 0;
-  public overallTwoPointersAttempted: number = 0;
+  public totalTwoPointersMade: number = 0;
+  public totalTwoPointersAttempted: number = 0;
 
-  public overallThreePointersMade: number = 0;
-  public overallThreePointersAttempted: number = 0;
+  public totalThreePointersMade: number = 0;
+  public totalThreePointersAttempted: number = 0;
+
+  public totalShotsMade: number = 0;
+  public totalShotsAttempted: number = 0;
 
   constructor(
     protected router: Router,
@@ -91,11 +93,35 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
             this.playerSummary = data;
             this.playerSummary.team = this.getTeam(playerID);
 
+            this.totalFreeThrowsMade = 0;
+            this.totalFreeThrowsAttempted = 0;
+            this.totalTwoPointersMade = 0;
+            this.totalTwoPointersAttempted = 0;
+            this.totalThreePointersMade = 0;
+            this.totalThreePointersAttempted = 0;
+            this.totalShotsMade = 0;
+            this.totalShotsAttempted = 0;
+
             if (this.playerSummary) {
-              this.barChartData = this.playerSummary.games.map((game) => ({
-                name: game.date,
-                value: game.points,
-              }));
+              this.playerSummary.games.forEach((game) => {
+                this.totalFreeThrowsMade += game.freeThrowsMade;
+                this.totalFreeThrowsAttempted += game.freeThrowsAttempted;
+
+                this.totalTwoPointersMade += game.twoPointersMade;
+                this.totalTwoPointersAttempted += game.twoPointersAttempted;
+
+                this.totalThreePointersMade += game.threePointersMade;
+                this.totalThreePointersAttempted += game.threePointersAttempted;
+
+                this.totalShotsMade +=
+                  game.freeThrowsMade +
+                  game.twoPointersMade +
+                  game.threePointersMade;
+                this.totalShotsAttempted +=
+                  game.freeThrowsAttempted +
+                  game.twoPointersAttempted +
+                  game.threePointersAttempted;
+              });
 
               this.cdr.detectChanges();
               this.drawShots();

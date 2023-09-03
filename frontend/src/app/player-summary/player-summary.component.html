@@ -19,15 +19,10 @@
 
   <div *ngIf="playerSummary" id="player-container">
     <mat-card class="player-name-card">
-      <mat-card-title>Player Information</mat-card-title>
-      <mat-card-content>
-        <p><strong>Name:</strong> {{ playerSummary.name }}</p>
-        <p><strong>Team:</strong> {{ playerSummary.team }}</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="player-summary-card">
-      <mat-card-title>Player Summary</mat-card-title>
+      <mat-card-title
+        >Player Information
+        <hr
+      /></mat-card-title>
       <mat-card-content>
         <p><strong>Name:</strong> {{ playerSummary.name }}</p>
         <p><strong>Team:</strong> {{ playerSummary.team }}</p>
@@ -36,8 +31,16 @@
 
     <div class="game-details-container">
       <mat-card class="game-data-card">
-        <mat-card-title>Game Data</mat-card-title>
+        <mat-card-title
+          >Game Data
+          <hr
+        /></mat-card-title>
+
         <mat-card-content>
+          <p>
+            <strong>*</strong> Specific game data for
+            <strong>{{ playerSummary.name }}</strong> across all games
+          </p>
           <mat-tab-group>
             <mat-tab
               *ngFor="let game of playerSummary.games"
@@ -105,108 +108,124 @@
         </mat-card-content>
       </mat-card>
 
-      <mat-card class="game-summary-card">
-        <mat-card-title>Game Summary</mat-card-title>
+      <mat-card class="game-plot-card">
+        <mat-card-title
+          >Game Plot
+          <hr
+        /></mat-card-title>
         <mat-card-content>
-          <div class="court-diagram">
-            <hr />
-            <p>
-              <strong>Shot Plot</strong>
-            </p>
-            <svg id="shotChart" width="500" height="500"></svg>
-          </div>
-          <p></p>
-          <hr />
           <p>
-            <strong>Shot Accuracy</strong>
+            <strong>*</strong> Graph of shots taken by
+            <strong>{{ playerSummary.name }}</strong> across all games
           </p>
-
-          <div
-            class="progress-bar-container"
-            *ngIf="playerSummary && playerSummary.games"
-          >
-            <ng-container *ngFor="let game of playerSummary.games">
-              <div>
-                <strong
-                  ><span>{{ game.date }}</span></strong
-                >
-              </div>
-              <div>
-                <span>Free Throw Percentage:</span>
-                <progress
-                  max="100"
-                  value="{{
-                    (game.freeThrowsMade / game.freeThrowsAttempted) * 100
-                  }}"
-                ></progress>
-                <span
-                  >{{
-                    (game.freeThrowsMade / game.freeThrowsAttempted) * 100
-                      | number : "1.0-0"
-                  }}%</span
-                >
-              </div>
-              <div>
-                <span>Two Pointers Percentage:</span>
-                <progress
-                  max="100"
-                  value="{{
-                    (game.twoPointersMade / game.twoPointersAttempted) * 100
-                  }}"
-                ></progress>
-                <span
-                  >{{
-                    (game.twoPointersMade / game.twoPointersAttempted) * 100
-                      | number : "1.0-0"
-                  }}%</span
-                >
-              </div>
-              <div>
-                <span>Three Pointers Percentage:</span>
-                <progress
-                  max="100"
-                  value="{{
-                    (game.threePointersMade / game.threePointersAttempted) * 100
-                  }}"
-                ></progress>
-                <span
-                  >{{
-                    (game.threePointersMade / game.threePointersAttempted) * 100
-                      | number : "1.0-0"
-                  }}%</span
-                >
-              </div>
-              <div>
-                <span>Overall Shot Percentage:</span>
-                <progress
-                  max="100"
-                  value="{{
-                    ((game.freeThrowsMade +
-                      game.twoPointersMade +
-                      game.threePointersMade) /
-                      (game.freeThrowsAttempted +
-                        game.twoPointersAttempted +
-                        game.threePointersAttempted)) *
-                      100
-                  }}"
-                ></progress>
-                <span
-                  >{{
-                    ((game.freeThrowsMade +
-                      game.twoPointersMade +
-                      game.threePointersMade) /
-                      (game.freeThrowsAttempted +
-                        game.twoPointersAttempted +
-                        game.threePointersAttempted)) *
-                      100 | number : "1.0-0"
-                  }}%</span
-                >
-                <p></p>
-              </div>
-            </ng-container>
+          <p>
+            Locations of <strong>made shots</strong> are marked as
+            <strong><span style="color: green">green</span></strong>
+          </p>
+          <p>
+            Locations of <strong>missed shots</strong> are marked as
+            <strong><span style="color: red">red</span></strong>
+          </p>
+          <div class="court-diagram">
+            <svg id="shotChart" width="500" height="500"></svg>
           </div>
         </mat-card-content>
       </mat-card>
     </div>
+
+    <mat-card class="player-summary-card">
+      <mat-card-title
+        >Player Summary
+        <hr
+      /></mat-card-title>
+      <mat-card-content>
+        <p>
+          <strong>*</strong> The player capability summary for
+          <strong>{{ playerSummary.name }}</strong>
+        </p>
+        <div class="progress-bar-container">
+          <div class="stats-column">
+            <div>
+              <p><strong>Shot Accuracy</strong></p>
+
+              <span>Shot Accuracy (Free Throws):</span>
+              <progress
+                max="100"
+                [value]="
+                  totalFreeThrowsAttempted == 0
+                    ? 0
+                    : (totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
+                "
+              ></progress>
+              <span>{{
+                totalFreeThrowsAttempted == 0
+                  ? "N/A"
+                  : ((totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
+                      | number : "1.0-0") + "%"
+              }}</span>
+            </div>
+            <div>
+              <span>Shot Accuracy (Two Pointers):</span>
+              <progress
+                max="100"
+                [value]="
+                  totalTwoPointersAttempted == 0
+                    ? 0
+                    : (totalTwoPointersMade / totalTwoPointersAttempted) * 100
+                "
+              ></progress>
+              <span>{{
+                totalTwoPointersAttempted == 0
+                  ? "N/A"
+                  : ((totalTwoPointersMade / totalTwoPointersAttempted) * 100
+                      | number : "1.0-0") + "%"
+              }}</span>
+            </div>
+            <div>
+              <span>Shot Accuracy (Three Pointers):</span>
+              <progress
+                max="100"
+                [value]="
+                  totalThreePointersAttempted == 0
+                    ? 0
+                    : (totalThreePointersMade / totalThreePointersAttempted) *
+                      100
+                "
+              ></progress>
+              <span>{{
+                totalThreePointersAttempted == 0
+                  ? "N/A"
+                  : ((totalThreePointersMade / totalThreePointersAttempted) *
+                      100 | number : "1.0-0") + "%"
+              }}</span>
+            </div>
+            <div>
+              <span><strong>Shot Accuracy (Overall):</strong></span>
+              <progress
+                max="100"
+                [value]="
+                  totalShotsAttempted == 0
+                    ? 0
+                    : (totalShotsMade / totalShotsAttempted) * 100
+                "
+              ></progress>
+              <span>{{
+                totalShotsAttempted == 0
+                  ? "N/A"
+                  : ((totalShotsMade / totalShotsAttempted) * 100
+                      | number : "1.0-0") + "%"
+              }}</span>
+            </div>
+          </div>
+
+          <div class="stats-column">somthing</div>
+          <!-- You can also add an Overall Shot Percentage using the aggregated data -->
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>
+
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>
