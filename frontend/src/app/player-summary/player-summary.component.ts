@@ -59,6 +59,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     const svg = d3.select('#shotChart');
     svg.selectAll('*').remove();
 
+    const tooltip = d3.select('#tooltip');
+
     const hoopX = 248;
     const hoopY = 416;
     const scaleX = 10;
@@ -76,7 +78,22 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               .attr('cx', shotX)
               .attr('cy', shotY)
               .attr('r', 5)
-              .style('fill', shot.isMake ? 'green' : 'red');
+              .style('fill', shot.isMake ? 'green' : 'red')
+              .on('mouseover', function (event, d) {
+                d3.select('#tooltipContent').html(
+                  `Location: (${shot.locationX}, ${
+                    shot.locationY
+                  })<br> Status: ${shot.isMake ? 'Made' : 'Missed'}
+                  <br> Date: ${game.date}`
+                );
+                tooltip
+                  .style('left', shotX + 30 + 'px')
+                  .style('top', shotY + 80 + 'px')
+                  .classed('hidden', false);
+              })
+              .on('mouseout', function (d) {
+                tooltip.classed('hidden', true);
+              });
           });
         }
       });

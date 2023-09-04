@@ -8,13 +8,13 @@
     margin-bottom: 20px;
   }
 
-  .player-selection {
-    margin-bottom: 30px;
-  }
-
   mat-form-field {
     width: 100%;
     max-width: 300px;
+  }
+
+  .player-selection {
+    margin-bottom: 30px;
   }
 
   #shotChart {
@@ -22,6 +22,28 @@
     height: 470px;
     background: url("/assets/court_diagram.jpg") no-repeat;
     background-size: cover;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #tooltip {
+    position: absolute;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    pointer-events: none;
+  }
+
+  #tooltipContent {
+    background-color: #007ac1;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 1px;
+    box-shadow: 2px 2px 5px rgba(0, 122, 193, 0.3);
+    color: #ffffff;
   }
 
   #player-container {
@@ -51,7 +73,7 @@
     .game-details-container {
       display: flex;
       justify-content: space-between;
-      width: 90%;
+      width: 100%;
       gap: 20px;
 
       .game-data-card {
@@ -78,8 +100,53 @@
     }
 
     progress {
-      width: 60%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      color: #007ac1;
+      width: 80%;
+      height: 15px;
       margin-right: 15px;
+      background-color: #e0e0e0;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    progress::-moz-progress-bar {
+      background-color: #007ac1;
+    }
+
+    progress::-webkit-progress-value {
+      background-color: #007ac1;
+    }
+
+    progress::-webkit-progress-value {
+      background-image: -webkit-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 50px 50px;
+    }
+
+    progress::-moz-progress-bar {
+      background-image: -moz-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 50px 50px;
     }
 
     span {

@@ -128,7 +128,14 @@
           </p>
           <div class="court-diagram">
             <svg id="shotChart" width="500" height="500"></svg>
+            <div id="tooltip" class="hidden">
+              <p id="tooltipContent"></p>
+            </div>
           </div>
+          <p></p>
+          <p>
+            Tips: Place your cursor on the shot point to reveal more details.
+          </p>
         </mat-card-content>
       </mat-card>
     </div>
@@ -200,7 +207,7 @@
               }}</span>
             </div>
             <div>
-              <span><strong>Shot Accuracy (Overall):</strong></span>
+              <span>Shot Accuracy (Overall):</span>
               <progress
                 max="100"
                 [value]="
@@ -218,8 +225,27 @@
             </div>
           </div>
 
-          <div class="stats-column"><strong>Others</strong></div>
-          <!-- You can also add an Overall Shot Percentage using the aggregated data -->
+          <div class="stats-column">
+            <div>
+              <p><strong>Shot Accuracy</strong></p>
+
+              <span>Shot Accuracy (Free Throws):</span>
+              <progress
+                max="100"
+                [value]="
+                  totalFreeThrowsAttempted == 0
+                    ? 0
+                    : (totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
+                "
+              ></progress>
+              <span>{{
+                totalFreeThrowsAttempted == 0
+                  ? "N/A"
+                  : ((totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
+                      | number : "1.0-0") + "%"
+              }}</span>
+            </div>
+          </div>
         </div>
       </mat-card-content>
     </mat-card>
