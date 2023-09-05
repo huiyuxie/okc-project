@@ -63,10 +63,10 @@
                   <p><strong>Blocks:</strong> {{ game.blocks }}</p>
                   <p><strong>Turnovers:</strong> {{ game.turnovers }}</p>
                   <p>
-                    <strong>Defensive Fouls:</strong> {{ game.defensiveFouls }}
+                    <strong>Offensive Fouls:</strong> {{ game.offensiveFouls }}
                   </p>
                   <p>
-                    <strong>Offensive Fouls:</strong> {{ game.offensiveFouls }}
+                    <strong>Defensive Fouls:</strong> {{ game.defensiveFouls }}
                   </p>
                   <p>
                     <strong>Free Throws Made:</strong> {{ game.freeThrowsMade }}
@@ -150,12 +150,32 @@
           <strong>*</strong> The player capability summary for
           <strong>{{ playerSummary.name }}</strong>
         </p>
+        <div>
+          <p><strong>Player Performance Breakdown</strong></p>
+          <div class="large-chart">
+            <ngx-charts-pie-chart
+              [results]="performancePieChartData"
+              [scheme]="{
+                domain: [
+                  '#007ac1',
+                  '#005a91 ',
+                  '#339ed4 ',
+                  '#4cb8e6 ',
+                  '#66d0f0 ',
+                  '#80daf9 ',
+                  '#99e4ff ',
+                  '#b3efff'
+                ]
+              }"
+            ></ngx-charts-pie-chart>
+          </div>
+        </div>
+
         <div class="progress-bar-container">
           <div class="stats-column">
-            <div>
-              <p><strong>Shot Accuracy</strong></p>
-
-              <span>Shot Accuracy (Free Throws):</span>
+            <p><strong>Shots Accuracy</strong></p>
+            <span>Shots Accuracy (Free Throws):</span>
+            <div class="progress-container">
               <progress
                 max="100"
                 [value]="
@@ -172,7 +192,7 @@
               }}</span>
             </div>
             <div>
-              <span>Shot Accuracy (Two Pointers):</span>
+              <span>Shos Accuracy (Two Pointers):</span>
               <progress
                 max="100"
                 [value]="
@@ -189,7 +209,7 @@
               }}</span>
             </div>
             <div>
-              <span>Shot Accuracy (Three Pointers):</span>
+              <span>Shots Accuracy (Three Pointers):</span>
               <progress
                 max="100"
                 [value]="
@@ -207,7 +227,7 @@
               }}</span>
             </div>
             <div>
-              <span>Shot Accuracy (Overall):</span>
+              <span>Shots Accuracy (Overall):</span>
               <progress
                 max="100"
                 [value]="
@@ -226,24 +246,21 @@
           </div>
 
           <div class="stats-column">
-            <div>
-              <p><strong>Shot Accuracy</strong></p>
-
-              <span>Shot Accuracy (Free Throws):</span>
-              <progress
-                max="100"
-                [value]="
-                  totalFreeThrowsAttempted == 0
-                    ? 0
-                    : (totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
-                "
-              ></progress>
-              <span>{{
-                totalFreeThrowsAttempted == 0
-                  ? "N/A"
-                  : ((totalFreeThrowsMade / totalFreeThrowsAttempted) * 100
-                      | number : "1.0-0") + "%"
-              }}</span>
+            <p><strong>Shots Breakdown</strong></p>
+            <div class="small-chart">
+              <ngx-charts-pie-chart
+                [results]="shotsPieChartData"
+                [scheme]="{
+                  domain: [
+                    '#007ac1',
+                    '#005a91',
+                    '#339ed4',
+                    '#4cb8e6',
+                    '#80c7ee',
+                    '#b3daf7'
+                  ]
+                }"
+              ></ngx-charts-pie-chart>
             </div>
           </div>
         </div>

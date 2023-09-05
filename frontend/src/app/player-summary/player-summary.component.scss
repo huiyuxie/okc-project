@@ -1,5 +1,10 @@
+// ---- Variables ---- //
+$primary-color: #007ac1;
+$primary-font: "Arial", sans-serif;
+
+// ---- Base Container Styles ---- //
 .container {
-  font-family: "Arial", sans-serif;
+  font-family: $primary-font;
   padding: 40px;
 
   h2 {
@@ -8,6 +13,21 @@
     margin-bottom: 20px;
   }
 
+  p,
+  li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  // ---- Form Styles ---- //
   mat-form-field {
     width: 100%;
     max-width: 300px;
@@ -17,6 +37,7 @@
     margin-bottom: 30px;
   }
 
+  // ---- Shot Chart Styles ---- //
   #shotChart {
     width: 500px;
     height: 470px;
@@ -24,10 +45,7 @@
     background-size: cover;
   }
 
-  .hidden {
-    display: none;
-  }
-
+  // ---- Tooltip Styles ---- //
   #tooltip {
     position: absolute;
     padding: 10px;
@@ -38,7 +56,7 @@
   }
 
   #tooltipContent {
-    background-color: #007ac1;
+    background-color: $primary-color;
     padding: 5px;
     border-radius: 5px;
     margin: 1px;
@@ -46,6 +64,7 @@
     color: #ffffff;
   }
 
+  // ---- Player Container Styles ---- //
   #player-container {
     margin-bottom: 20px;
 
@@ -55,19 +74,19 @@
       margin-top: 10px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      mat-card-title {
-        margin-top: 0;
-        font-size: 20px;
-        font-weight: 600;
-        color: #007ac1;
-      }
+    mat-card-title {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007ac1;
+    }
 
-      mat-card-content {
-        padding-top: 10px;
-        padding-left: 0;
-        margin-left: 10px;
-      }
+    mat-card-content {
+      padding-top: 10px;
+      padding-left: 0;
+      margin-left: 10px;
     }
 
     .game-details-container {
@@ -93,12 +112,14 @@
       padding: 20px 0;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 10px;
 
       .stats-column {
-        width: 40%;
+        width: 50%;
       }
     }
 
+    // ---- Progress Bar Styles ---- //
     progress {
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -107,6 +128,8 @@
       color: #007ac1;
       width: 80%;
       height: 15px;
+      margin-bottom: 1px;
+      margin-top: 10px;
       margin-right: 15px;
       background-color: #e0e0e0;
       border-radius: 3px;
@@ -152,49 +175,27 @@
     span {
       font-size: 14px;
       margin-right: 10px;
+      vertical-align: middle;
     }
 
-    .table-container {
-      overflow-x: auto;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      background: #fff;
-      margin-top: 20px;
-    }
-
-    table {
+    // ---- Pie Chart Styles ---- //
+    ngx-charts-pie-chart {
       width: 100%;
-      border-collapse: collapse;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      height: 200px;
+      display: block;
     }
 
-    th {
-      background-color: #007ac1;
-      color: white;
-      padding: 12px 15px;
+    .large-chart {
+      transform: scale(1);
+      place-items: center;
+      height: 40vh;
     }
 
-    td {
-      padding: 10px 15px;
-      border-bottom: 1px solid #ddd;
+    .small-chart {
+      transform: scale(1);
     }
 
-    tr:hover {
-      background-color: #f5f5f5;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    .player-name-card {
-      margin-bottom: 20px;
-      padding: 20px;
-      width: 60%;
-    }
-
+    .player-name-card,
     .player-summary-card {
       margin-bottom: 20px;
       padding: 20px;
@@ -208,16 +209,6 @@
 
       .stats-column {
         width: 50%;
-
-        p,
-        li {
-          font-size: 14px;
-          margin-bottom: 10px;
-
-          strong {
-            font-weight: 600;
-          }
-        }
       }
     }
   }

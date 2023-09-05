@@ -21,7 +21,11 @@ import * as d3 from 'd3';
 })
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
   public playerSummary: PlayerSummary | null = null;
+
   public selectedPlayerID: number | null = null;
+
+  public shotsPieChartData: any[] = [];
+  public performancePieChartData: any[] = [];
 
   public totalFreeThrowsMade: number = 0;
   public totalFreeThrowsAttempted: number = 0;
@@ -34,6 +38,17 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   public totalShotsMade: number = 0;
   public totalShotsAttempted: number = 0;
+
+  public totalAssists: number = 0;
+  public totalOffensiveRebounds: number = 0;
+  public totalDeffensiveRebounds: number = 0;
+  public totalSteals: number = 0;
+  public totalBlocks: number = 0;
+  public totalTurnovers: number = 0;
+  public totalOffensiveFouls: number = 0;
+  public totalDeffensiveFouls: number = 0;
+
+  public totalPerformance = 0;
 
   constructor(
     protected router: Router,
@@ -119,6 +134,17 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
             this.totalShotsMade = 0;
             this.totalShotsAttempted = 0;
 
+            this.totalAssists = 0;
+            this.totalOffensiveRebounds = 0;
+            this.totalDeffensiveRebounds = 0;
+            this.totalSteals = 0;
+            this.totalBlocks = 0;
+            this.totalTurnovers = 0;
+            this.totalOffensiveFouls = 0;
+            this.totalDeffensiveFouls = 0;
+
+            this.totalPerformance = 0;
+
             if (this.playerSummary) {
               this.playerSummary.games.forEach((game) => {
                 this.totalFreeThrowsMade += game.freeThrowsMade;
@@ -130,6 +156,15 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
                 this.totalThreePointersMade += game.threePointersMade;
                 this.totalThreePointersAttempted += game.threePointersAttempted;
 
+                this.totalAssists += game.assists;
+                this.totalOffensiveRebounds += game.offensiveRebounds;
+                this.totalDeffensiveRebounds += game.defensiveRebounds;
+                this.totalSteals += game.steals;
+                this.totalBlocks += game.blocks;
+                this.totalTurnovers += game.turnovers;
+                this.totalOffensiveFouls += game.offensiveFouls;
+                this.totalDeffensiveFouls += game.defensiveFouls;
+
                 this.totalShotsMade +=
                   game.freeThrowsMade +
                   game.twoPointersMade +
@@ -138,7 +173,123 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
                   game.freeThrowsAttempted +
                   game.twoPointersAttempted +
                   game.threePointersAttempted;
+
+                this.totalPerformance +=
+                  game.assists +
+                  game.offensiveRebounds +
+                  game.defensiveRebounds +
+                  game.steals +
+                  game.blocks +
+                  game.turnovers +
+                  game.offensiveFouls +
+                  game.defensiveFouls;
               });
+
+              this.performancePieChartData = [
+                {
+                  name: `Assists (${(
+                    (this.totalAssists / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalAssists,
+                },
+                {
+                  name: `Offensive Rebounds (${(
+                    (this.totalOffensiveRebounds / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalOffensiveRebounds,
+                },
+                {
+                  name: `Defensive Rebounds (${(
+                    (this.totalDeffensiveRebounds / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalDeffensiveRebounds,
+                },
+                {
+                  name: `Steals (${(
+                    (this.totalSteals / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalSteals,
+                },
+                {
+                  name: `Blocks (${(
+                    (this.totalBlocks / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalBlocks,
+                },
+                {
+                  name: `Turnovers (${(
+                    (this.totalTurnovers / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalTurnovers,
+                },
+                {
+                  name: `Offensive Fouls (${(
+                    (this.totalOffensiveFouls / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalOffensiveFouls,
+                },
+                {
+                  name: `Deffensive Fouls (${(
+                    (this.totalDeffensiveFouls / this.totalPerformance) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalDeffensiveFouls,
+                },
+              ];
+
+              this.shotsPieChartData = [
+                {
+                  name: `Free Throws Made (${(
+                    (this.totalFreeThrowsMade / this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalFreeThrowsMade,
+                },
+                {
+                  name: `Free Throws Attempted (${(
+                    (this.totalFreeThrowsAttempted / this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalFreeThrowsAttempted,
+                },
+                {
+                  name: `Two Pointers Made (${(
+                    (this.totalTwoPointersMade / this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalTwoPointersMade,
+                },
+                {
+                  name: `Two Pointers Attempted (${(
+                    (this.totalTwoPointersAttempted /
+                      this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalTwoPointersAttempted,
+                },
+                {
+                  name: `Three Pointers Made (${(
+                    (this.totalThreePointersMade / this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalThreePointersMade,
+                },
+                {
+                  name: `Three Pointers Attempted (${(
+                    (this.totalThreePointersAttempted /
+                      this.totalShotsAttempted) *
+                    100
+                  ).toFixed(2)}%)`,
+                  value: this.totalThreePointersAttempted,
+                },
+              ];
 
               this.cdr.detectChanges();
               this.drawShots();
