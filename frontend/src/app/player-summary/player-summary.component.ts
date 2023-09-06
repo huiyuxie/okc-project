@@ -70,7 +70,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     return '';
   }
 
-  drawShots() {
+  drawShotsChart() {
     const svg = d3.select('#shotChart');
     svg.selectAll('*').remove();
 
@@ -114,6 +114,135 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       });
     }
   }
+  drawShotsDistance() {
+    const svg = d3.select('#shotDistancePlot');
+    svg.selectAll('*').remove();
+
+    const width = +svg.attr('width');
+    const height = +svg.attr('height');
+
+    svg.style('background-color', '#f9f9f9');
+
+    const xScale = d3.scaleLinear().domain([-5, 55]).range([0, width]);
+    const yScale = d3.scaleLinear().domain([-5, 55]).range([height, 0]);
+
+    const xAxis = d3
+      .axisBottom(xScale)
+      .ticks(11)
+      .tickSizeInner(-height)
+      .tickSizeOuter(0)
+      .tickPadding(10);
+
+    const yAxis = d3
+      .axisLeft(yScale)
+      .ticks(11)
+      .tickSizeInner(-width)
+      .tickSizeOuter(0)
+      .tickPadding(10);
+
+    svg
+      .append('g')
+      .attr('transform', `translate(0,${height})`)
+      .call(xAxis)
+      .attr('font-size', '12px')
+      .attr('color', '#777')
+      .selectAll('.tick line')
+      .attr('stroke', '#eee')
+      .attr('stroke-width', 0.5);
+
+    svg
+      .append('g')
+      .call(yAxis)
+      .attr('font-size', '12px')
+      .attr('color', '#777')
+      .selectAll('.tick line')
+      .attr('stroke', '#eee')
+      .attr('stroke-width', 0.5);
+
+    const legend = svg
+      .append('g')
+      .attr('transform', `translate(${width - 110},10)`);
+    legend
+      .append('rect')
+      .attr('width', 100)
+      .attr('height', 50)
+      .attr('fill', 'white')
+      .attr('stroke', '#ccc');
+
+    const legendCircles = legend
+      .selectAll('circle')
+      .data([
+        { color: '#007ac1', label: 'Made' },
+        { color: 'none', label: 'Missed' },
+      ])
+      .enter()
+      .append('circle')
+      .attr('cx', 15)
+      .attr('cy', function (d, i) {
+        return i * 25 + 12;
+      })
+      .attr('r', 5)
+      .style('fill', (d) => d.color)
+      .attr('stroke', '#007ac1')
+      .attr('stroke-width', (d) => (d.color === 'none' ? 2 : 0));
+
+    const legendLabels = legend
+      .selectAll('text')
+      .data([
+        { color: '#007ac1', label: 'Made' },
+        { color: 'none', label: 'Missed' },
+      ])
+      .enter()
+      .append('text')
+      .attr('x', 30)
+      .attr('y', function (d, i) {
+        return i * 25 + 17;
+      })
+      .text((d) => d.label)
+      .attr('font-size', '12px')
+      .attr('fill', '#666');
+
+    for (let i = 0; i <= 50; i += 5) {
+      svg
+        .append('text')
+        .attr('x', xScale(i) - 10)
+        .attr('y', yScale(0) + 20)
+        .text(i)
+        .attr('font-size', '10px')
+        .attr('fill', '#666');
+
+      svg
+        .append('text')
+        .attr('x', xScale(0) - 20)
+        .attr('y', yScale(i) + 5)
+        .text(i)
+        .attr('font-size', '10px')
+        .attr('fill', '#666');
+    }
+
+    if (this.playerSummary && this.playerSummary.games) {
+      this.playerSummary.games.forEach((game) => {
+        if (game.shots) {
+          game.shots.forEach((shot) => {
+            const shotX = xScale(Math.abs(shot.locationX));
+            const shotY = yScale(Math.abs(shot.locationY));
+
+            svg
+              .append('circle')
+              .attr('cx', shotX)
+              .attr('cy', shotY)
+              .attr('r', 5)
+              .attr('stroke', '#007ac1')
+              .attr('stroke-width', shot.isMake ? 0 : 2)
+              .style('fill', shot.isMake ? '#007ac1' : 'none')
+              .style('opacity', 0.7);
+          });
+        }
+      });
+    }
+  }
+
+  drawShotsDistribution() {}
 
   fetchPlayerData(playerID: number): void {
     if (playerID !== null) {
@@ -292,7 +421,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               ];
 
               this.cdr.detectChanges();
-              this.drawShots();
+              this.drawShotsChart();
+              this.drawShotsDistance();
             }
           },
           (error) => {

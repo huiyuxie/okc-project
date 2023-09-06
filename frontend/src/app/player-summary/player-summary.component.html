@@ -21,6 +21,7 @@
     <mat-card class="player-name-card">
       <mat-card-title
         >Player Information
+        <p>* Basic information of the selected player</p>
         <hr
       /></mat-card-title>
       <mat-card-content>
@@ -33,14 +34,13 @@
       <mat-card class="game-data-card">
         <mat-card-title
           >Game Data
+          <p>
+            * Specific game data for {{ playerSummary.name }} across all games
+          </p>
           <hr
         /></mat-card-title>
 
         <mat-card-content>
-          <p>
-            <strong>*</strong> Specific game data for
-            <strong>{{ playerSummary.name }}</strong> across all games
-          </p>
           <mat-tab-group>
             <mat-tab
               *ngFor="let game of playerSummary.games"
@@ -111,13 +111,13 @@
       <mat-card class="game-plot-card">
         <mat-card-title
           >Game Plot
+          <p>
+            * Graph of shots taken by
+            {{ playerSummary.name }} across all games
+          </p>
           <hr
         /></mat-card-title>
         <mat-card-content>
-          <p>
-            <strong>*</strong> Graph of shots taken by
-            <strong>{{ playerSummary.name }}</strong> across all games
-          </p>
           <p>
             Locations of <strong>made shots</strong> are marked as
             <strong><span style="color: green">green</span></strong>
@@ -143,15 +143,21 @@
     <mat-card class="player-summary-card">
       <mat-card-title
         >Player Summary
+        <p>
+          * The player capability summary for
+          {{ playerSummary.name }}
+        </p>
         <hr
       /></mat-card-title>
       <mat-card-content>
-        <p>
-          <strong>*</strong> The player capability summary for
-          <strong>{{ playerSummary.name }}</strong>
-        </p>
         <div>
           <p><strong>Player Performance Breakdown</strong></p>
+          <p>
+            Performance pie chart is composed of (1) Assists, (2) Offensive
+            Rebounds, (3) Deffensive Rebounds, (4) Steals, (5) Blocks, (6)
+            Turnovers, (7) Offensive Fouls, and (8) Deffensive Fouls.
+          </p>
+
           <div class="large-chart">
             <ngx-charts-pie-chart
               [results]="performancePieChartData"
@@ -174,7 +180,13 @@
         <div class="progress-bar-container">
           <div class="stats-column">
             <p><strong>Shots Accuracy</strong></p>
+            <p>
+              Shot accuracy is computed by dividing shots made by shots
+              attempted.
+            </p>
+
             <span>Shots Accuracy (Free Throws):</span>
+            <p>Free Throws Made / Free Throws Attempted</p>
             <div class="progress-container">
               <progress
                 max="100"
@@ -193,6 +205,7 @@
             </div>
             <div>
               <span>Shos Accuracy (Two Pointers):</span>
+              <p>Two Pointers Made / Two Pointers Attempted</p>
               <progress
                 max="100"
                 [value]="
@@ -210,6 +223,7 @@
             </div>
             <div>
               <span>Shots Accuracy (Three Pointers):</span>
+              <p>Three Pointers Made / Three Pointers Attempted</p>
               <progress
                 max="100"
                 [value]="
@@ -228,6 +242,7 @@
             </div>
             <div>
               <span>Shots Accuracy (Overall):</span>
+              <p>Overall Shots Made / Overall Shots Attempted</p>
               <progress
                 max="100"
                 [value]="
@@ -247,6 +262,12 @@
 
           <div class="stats-column">
             <p><strong>Shots Breakdown</strong></p>
+            <p>
+              Shots pie chart is composed of (1) Free Throws Made, (2) Free
+              Throws Attempted, (3) Two Pointers Made, (4) Two Pointers
+              Attempted, (5) Three Pointers Made, and (6) Three Pointers
+              Attempted.
+            </p>
             <div class="small-chart">
               <ngx-charts-pie-chart
                 [results]="shotsPieChartData"
@@ -262,6 +283,63 @@
                 }"
               ></ngx-charts-pie-chart>
             </div>
+          </div>
+        </div>
+        <div>
+          <p><strong>Shots Distance Plot</strong></p>
+          <p>
+            The shot distance plot is based on the absolute values of shots,
+            showing the relation between shots location and shots distance.
+          </p>
+          <svg id="shotDistancePlot" width="500" height="500"></svg>
+        </div>
+
+        <div>
+          <p><strong>Shots Distribution Plot</strong></p>
+          <p>
+            The shot distance plot is based on the absolute values of shots,
+            showing the relation between shots location and shots distance.
+          </p>
+          <svg id="shotDistributionPlot" width="500" height="500"></svg>
+        </div>
+
+        <div>
+          <p><strong>Player Efficiency Rating (PER)</strong></p>
+          <p>
+            PER is calculated by taking the difference between positive and
+            negative scores and then dividing by the total game minutes. The
+            rating fields and the corresponding weights are given as below.
+          </p>
+          <p>
+            Positive Stats (Weights): <br />
+            Points (0.8)<br />
+            Assists (0.3)<br />
+            Offensive/Deffensive Rebounds (0.2)<br />
+            Steals (0.2) <br />
+            Blocks (0.2)
+          </p>
+
+          <p>
+            Negative Stats (Weights): <br />
+            Turnovers (0.1)<br />
+            Offensive/Deffensive Fouls (0.2)
+          </p>
+          <div class="large-chart">
+            <ngx-charts-pie-chart
+              [results]="performancePieChartData"
+              [scheme]="{
+                domain: [
+                  '#007ac1',
+                  '#005a91 ',
+                  '#339ed4 ',
+                  '#4cb8e6 ',
+                  '#66d0f0 ',
+                  '#80daf9 ',
+                  '#99e4ff ',
+                  '#b3efff'
+                ]
+              }"
+            ></ngx-charts-pie-chart>
           </div>
         </div>
       </mat-card-content>
