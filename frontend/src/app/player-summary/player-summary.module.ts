@@ -19,7 +19,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 @NgModule({
   declarations: [PlayerSummaryComponent],
   imports: [
-    NgxChartsModule,
     CommonModule,
     routing,
     MatToolbarModule,
@@ -34,6 +33,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatOptionModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxChartsModule,
   ],
   providers: [PlayersService],
   bootstrap: [PlayerSummaryComponent],

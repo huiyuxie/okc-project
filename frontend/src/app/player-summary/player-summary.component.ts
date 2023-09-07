@@ -5,11 +5,19 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
 import { PlayersService } from '../_services/players.service';
 import { PlayerSummary } from '../_models/player-summary.model';
-import { switchMap } from 'rxjs';
+import {
+  Chart,
+  RadarController,
+  PointElement,
+  LineElement,
+  LinearScale,
+  CategoryScale,
+  RadialLinearScale,
+} from 'chart.js';
 import * as d3 from 'd3';
 
 @UntilDestroy()
@@ -20,6 +28,7 @@ import * as d3 from 'd3';
   encapsulation: ViewEncapsulation.None,
 })
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
+  // Set public variables
   public playerSummary: PlayerSummary | null = null;
 
   public selectedPlayerID: number | null = null;
@@ -48,19 +57,46 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   public totalOffensiveFouls: number = 0;
   public totalDeffensiveFouls: number = 0;
 
-  public totalPerformance = 0;
+  public totalPoints: number = 0;
+  public totalMinutes: number = 0;
+
+  public totalPerformance: number = 0;
+
+  radarChartLabels: string[] = [
+    'Free Throws Efficiency',
+    'Two Pointers Efficiency',
+    'Three Pointers Efficiency',
+    'Assists Efficiency',
+    'Rebounds Efficiency',
+    'Steals Efficiency',
+    'Blocks Efficiency',
+    '* Turnovers Efficiency',
+    '* Fouls Efficiency',
+  ];
+  radarChartData: any;
+  radarChart: any;
 
   constructor(
     protected router: Router,
     protected activatedRoute: ActivatedRoute,
     protected cdr: ChangeDetectorRef,
     protected playersService: PlayersService
-  ) {}
+  ) {
+    Chart.register(
+      RadarController,
+      PointElement,
+      LineElement,
+      LinearScale,
+      CategoryScale,
+      RadialLinearScale
+    );
+  }
 
   ngOnInit(): void {
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
+  // Get team name for player
   getTeam(playerID: number): string {
     if (playerID <= 16) {
       return 'Monstars';
@@ -70,6 +106,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     return '';
   }
 
+  // Draw shots on the given court graph
   drawShotsChart() {
     const svg = d3.select('#shotChart');
     svg.selectAll('*').remove();
@@ -115,6 +152,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Draw shots distance graph
   drawShotsDistance() {
     const svg = d3.select('#shotDistancePlot');
     svg.selectAll('*').remove();
@@ -244,7 +282,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('y', height - 5)
       .attr('text-anchor', 'middle')
       .attr('fill', '#777')
-      .text('Abs Location X');
+      .text('Absolute Location X (Feet)');
 
     svg
       .append('text')
@@ -253,7 +291,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('x', -height / 2)
       .attr('text-anchor', 'middle')
       .attr('fill', '#777')
-      .text('Abs Location Y');
+      .text('Absolute Location Y (Feet)');
 
     if (this.playerSummary && this.playerSummary.games) {
       this.playerSummary.games.forEach((game) => {
@@ -300,6 +338,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Draw shots distribution graph
   drawShotsDistribution() {
     const svg = d3.select('#shotDistributionPlot');
     svg.selectAll('*').remove();
@@ -380,7 +419,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('y', height)
       .attr('text-anchor', 'middle')
       .attr('fill', '#777')
-      .text('Shot Distance');
+      .text('Shot Distance (Feet)');
 
     svg
       .append('text')
@@ -389,7 +428,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('x', -height / 2)
       .attr('text-anchor', 'middle')
       .attr('fill', '#777')
-      .text('Number of Shots');
+      .text('Number of Shots (#)');
 
     svg
       .selectAll('rect')
@@ -423,6 +462,111 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       });
   }
 
+  // Draw performance radar chart
+  drawRadarChart() {
+    if (this.radarChart) {
+      this.radarChart.destroy();
+    }
+
+    const radarColor = '#007ac1';
+
+    this.radarChartData = {
+      labels: this.radarChartLabels,
+      datasets: [
+        {
+          label: this.playerSummary?.name || 'Unknown Player',
+          data: [
+            (this.totalFreeThrowsMade / this.totalMinutes).toFixed(2),
+            (this.totalTwoPointersMade / this.totalMinutes).toFixed(2),
+            (this.totalThreePointersMade / this.totalMinutes).toFixed(2),
+            (this.totalAssists / this.totalMinutes + 0.1).toFixed(2),
+            (
+              (this.totalOffensiveRebounds + this.totalDeffensiveRebounds) /
+                this.totalMinutes +
+              0.1
+            ).toFixed(2),
+            (this.totalSteals / this.totalMinutes).toFixed(2),
+            (this.totalBlocks / this.totalMinutes).toFixed(2),
+            (this.totalTurnovers / this.totalMinutes).toFixed(2),
+            (
+              (this.totalOffensiveFouls + this.totalDeffensiveFouls) /
+                this.totalMinutes +
+              0.1
+            ).toFixed(2),
+          ],
+          backgroundColor: 'rgba(0, 122, 193, 0.2)',
+          borderColor: radarColor,
+          borderWidth: 2,
+          pointBackgroundColor: this.radarChartLabels.map((label) =>
+            label.includes('Turnovers') || label.includes('Fouls')
+              ? 'transparent'
+              : radarColor
+          ),
+          pointBorderWidth: 2,
+          pointRadius: 5,
+          pointHoverRadius: 8,
+        },
+      ],
+    };
+
+    let ctx = document.getElementById('radarChart');
+    if (ctx instanceof HTMLCanvasElement) {
+      this.radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: this.radarChartData,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              min: 0,
+              max: 0.5,
+              grid: {
+                color: '#e5e5e5',
+              },
+              pointLabels: {
+                font: {
+                  size: 12,
+                },
+              },
+              ticks: {
+                stepSize: 0.1,
+                backdropColor: 'transparent',
+              },
+              angleLines: {
+                color: '#cccccc',
+              },
+            },
+          },
+          plugins: {
+            tooltip: {
+              enabled: true,
+              callbacks: {
+                title: function (tooltipItems) {
+                  return tooltipItems[0].label;
+                },
+                label: function (tooltipItem) {
+                  return `Value: ${tooltipItem.parsed.r.toFixed(2)}`;
+                },
+              },
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              cornerRadius: 4,
+            },
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: '#333333',
+                boxWidth: 12,
+                padding: 10,
+              },
+            },
+          },
+        },
+      });
+    }
+  }
+
+  // Call to fetch player data
   fetchPlayerData(playerID: number): void {
     if (playerID !== null) {
       this.playersService
@@ -451,6 +595,9 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
             this.totalOffensiveFouls = 0;
             this.totalDeffensiveFouls = 0;
 
+            this.totalPoints = 0;
+            this.totalMinutes = 0;
+
             this.totalPerformance = 0;
 
             if (this.playerSummary) {
@@ -473,10 +620,14 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
                 this.totalOffensiveFouls += game.offensiveFouls;
                 this.totalDeffensiveFouls += game.defensiveFouls;
 
+                this.totalPoints += game.points;
+                this.totalMinutes += game.minutes;
+
                 this.totalShotsMade +=
                   game.freeThrowsMade +
                   game.twoPointersMade +
                   game.threePointersMade;
+
                 this.totalShotsAttempted +=
                   game.freeThrowsAttempted +
                   game.twoPointersAttempted +
@@ -603,6 +754,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               this.drawShotsChart();
               this.drawShotsDistance();
               this.drawShotsDistribution();
+              this.drawRadarChart();
             }
           },
           (error) => {

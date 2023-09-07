@@ -303,8 +303,8 @@
             The shot distance plot is based on the distance values of shots,
             further showing the overall distribution of shots distance
             values.<br />
-            Tips: Place your cursor on the point to check specific data: (1)
-            Shot Distance Range and (2) Number of Shots.
+            Tips: Place your cursor on the bar to check specific data: (1) Shot
+            Distance Range and (2) Number of Shots.
           </p>
           <svg id="shotDistributionPlot" width="500" height="500"></svg>
         </div>
@@ -314,9 +314,15 @@
           <p><strong>Player Efficiency Rating (PER)</strong></p>
           <p>
             PER is calculated by taking the difference between positive and
-            negative scores and then dividing by the total game minutes. The
-            rating fields and the corresponding weights are given as below.
+            negative scores and then dividing by the total game minutes. <br />
+            First, the efficiency data is calculated and showed in the radar
+            chart as below.
           </p>
+
+          <div class="radar-container">
+            <canvas id="radarChart"></canvas>
+          </div>
+
           <p>
             Positive Stats (Weights): <br />
             Points (0.8)<br />
@@ -331,23 +337,6 @@
             Turnovers (0.1)<br />
             Offensive/Deffensive Fouls (0.2)
           </p>
-          <div class="large-chart">
-            <ngx-charts-pie-chart
-              [results]="performancePieChartData"
-              [scheme]="{
-                domain: [
-                  '#007ac1',
-                  '#005a91 ',
-                  '#339ed4 ',
-                  '#4cb8e6 ',
-                  '#66d0f0 ',
-                  '#80daf9 ',
-                  '#99e4ff ',
-                  '#b3efff'
-                ]
-              }"
-            ></ngx-charts-pie-chart>
-          </div>
         </div>
       </mat-card-content>
     </mat-card>

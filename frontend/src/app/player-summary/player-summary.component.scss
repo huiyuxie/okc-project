@@ -33,8 +33,42 @@ $primary-font: "Arial", sans-serif;
     max-width: 300px;
   }
 
+  mat-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  mat-card-title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #007ac1;
+  }
+
+  mat-card-content {
+    padding-top: 10px;
+    padding-left: 0;
+    margin-left: 10px;
+  }
+
   .player-selection {
     margin-bottom: 30px;
+  }
+
+  .player-name-card,
+  .player-summary-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 70%;
+  }
+
+  .radar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   // ---- Shot Chart Styles ---- //
@@ -59,6 +93,12 @@ $primary-font: "Arial", sans-serif;
     padding: 30px;
   }
 
+  // ---- Radar Chart Styles ---- //
+  #radarChart {
+    width: 400px;
+    height: 400px;
+  }
+
   // ---- Tooltip Styles ---- //
   #tooltip {
     position: absolute;
@@ -81,27 +121,6 @@ $primary-font: "Arial", sans-serif;
   // ---- Player Container Styles ---- //
   #player-container {
     margin-bottom: 20px;
-
-    mat-card {
-      padding: 20px;
-      margin-bottom: 20px;
-      margin-top: 10px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    mat-card-title {
-      margin-top: 0;
-      font-size: 20px;
-      font-weight: 600;
-      color: #007ac1;
-    }
-
-    mat-card-content {
-      padding-top: 10px;
-      padding-left: 0;
-      margin-left: 10px;
-    }
 
     .game-details-container {
       display: flex;
@@ -209,13 +228,6 @@ $primary-font: "Arial", sans-serif;
       transform: scale(1);
       place-items: center;
       height: 30vh;
-    }
-
-    .player-name-card,
-    .player-summary-card {
-      margin-bottom: 20px;
-      padding: 20px;
-      width: 70%;
     }
 
     .game-stats {
