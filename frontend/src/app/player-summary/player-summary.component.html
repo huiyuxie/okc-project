@@ -164,12 +164,12 @@
               [scheme]="{
                 domain: [
                   '#007ac1',
-                  '#005a91 ',
-                  '#339ed4 ',
-                  '#4cb8e6 ',
-                  '#66d0f0 ',
-                  '#80daf9 ',
-                  '#99e4ff ',
+                  '#005a91',
+                  '#339ed4',
+                  '#4cb8e6',
+                  '#66d0f0',
+                  '#80daf9',
+                  '#99e4ff',
                   '#b3efff'
                 ]
               }"
@@ -273,12 +273,12 @@
                 [results]="shotsPieChartData"
                 [scheme]="{
                   domain: [
-                    '#007ac1',
-                    '#005a91',
                     '#339ed4',
                     '#4cb8e6',
-                    '#80c7ee',
-                    '#b3daf7'
+                    '#66d0f0',
+                    '#80daf9',
+                    '#99e4ff',
+                    '#b3efff'
                   ]
                 }"
               ></ngx-charts-pie-chart>
@@ -289,21 +289,28 @@
           <p><strong>Shots Distance Plot</strong></p>
           <p>
             The shot distance plot is based on the absolute values of shots,
-            showing the relation between shots location and shots distance.
+            showing the relation between shots location and shots distance.<br />
+            Tips: Place your cursor on the point to check specific data: (1)
+            Absolute Location X, (2) Absolute Location Y, and (3) Distance.
           </p>
           <svg id="shotDistancePlot" width="500" height="500"></svg>
         </div>
 
         <div>
+          <p></p>
           <p><strong>Shots Distribution Plot</strong></p>
           <p>
-            The shot distance plot is based on the absolute values of shots,
-            showing the relation between shots location and shots distance.
+            The shot distance plot is based on the distance values of shots,
+            further showing the overall distribution of shots distance
+            values.<br />
+            Tips: Place your cursor on the point to check specific data: (1)
+            Shot Distance Range and (2) Number of Shots.
           </p>
           <svg id="shotDistributionPlot" width="500" height="500"></svg>
         </div>
 
         <div>
+          <p></p>
           <p><strong>Player Efficiency Rating (PER)</strong></p>
           <p>
             PER is calculated by taking the difference between positive and

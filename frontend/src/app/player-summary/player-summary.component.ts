@@ -114,6 +114,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       });
     }
   }
+
   drawShotsDistance() {
     const svg = d3.select('#shotDistancePlot');
     svg.selectAll('*').remove();
@@ -125,6 +126,18 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
     const xScale = d3.scaleLinear().domain([-5, 55]).range([0, width]);
     const yScale = d3.scaleLinear().domain([-5, 55]).range([height, 0]);
+
+    const tooltip = d3
+      .select('body')
+      .append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0)
+      .style('background-color', 'white')
+      .style('border-radius', '5px')
+      .style('padding', '10px')
+      .style('position', 'absolute')
+      .style('z-index', '10')
+      .style('pointer-events', 'none');
 
     const xAxis = d3
       .axisBottom(xScale)
@@ -150,6 +163,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('stroke', '#eee')
       .attr('stroke-width', 0.5);
 
+    svg.selectAll('.tick text').style('opacity', 0);
+
     svg
       .append('g')
       .call(yAxis)
@@ -159,45 +174,48 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       .attr('stroke', '#eee')
       .attr('stroke-width', 0.5);
 
+    svg.selectAll('.tick text').style('opacity', 0);
+
+    svg.selectAll('.domain').remove();
+
     const legend = svg
       .append('g')
       .attr('transform', `translate(${width - 110},10)`);
+
     legend
       .append('rect')
       .attr('width', 100)
       .attr('height', 50)
       .attr('fill', 'white')
-      .attr('stroke', '#ccc');
+      .attr('stroke', '#ccc')
+      .attr('stroke-width', 1)
+      .attr('rx', 5)
+      .attr('ry', 5);
 
-    const legendCircles = legend
+    const dataLegend = [
+      { color: '#007ac1', label: 'Made' },
+      { color: 'none', label: 'Missed' },
+    ];
+
+    legend
       .selectAll('circle')
-      .data([
-        { color: '#007ac1', label: 'Made' },
-        { color: 'none', label: 'Missed' },
-      ])
+      .data(dataLegend)
       .enter()
       .append('circle')
       .attr('cx', 15)
-      .attr('cy', function (d, i) {
-        return i * 25 + 12;
-      })
+      .attr('cy', (d, i) => i * 25 + 12)
       .attr('r', 5)
       .style('fill', (d) => d.color)
       .attr('stroke', '#007ac1')
       .attr('stroke-width', (d) => (d.color === 'none' ? 2 : 0));
 
-    const legendLabels = legend
+    legend
       .selectAll('text')
-      .data([
-        { color: '#007ac1', label: 'Made' },
-        { color: 'none', label: 'Missed' },
-      ])
+      .data(dataLegend)
       .enter()
       .append('text')
       .attr('x', 30)
-      .attr('y', function (d, i) {
-        return i * 25 + 17;
-      })
+      .attr('y', (d, i) => i * 25 + 17)
       .text((d) => d.label)
       .attr('font-size', '12px')
       .attr('fill', '#666');
@@ -205,7 +223,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     for (let i = 0; i <= 50; i += 5) {
       svg
         .append('text')
-        .attr('x', xScale(i) - 10)
+        .attr('x', xScale(i) - 5)
         .attr('y', yScale(0) + 20)
         .text(i)
         .attr('font-size', '10px')
@@ -219,6 +237,23 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
         .attr('font-size', '10px')
         .attr('fill', '#666');
     }
+
+    svg
+      .append('text')
+      .attr('x', width / 2)
+      .attr('y', height - 5)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#777')
+      .text('Abs Location X');
+
+    svg
+      .append('text')
+      .attr('transform', 'rotate(-90)')
+      .attr('y', 15)
+      .attr('x', -height / 2)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#777')
+      .text('Abs Location Y');
 
     if (this.playerSummary && this.playerSummary.games) {
       this.playerSummary.games.forEach((game) => {
@@ -235,14 +270,158 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               .attr('stroke', '#007ac1')
               .attr('stroke-width', shot.isMake ? 0 : 2)
               .style('fill', shot.isMake ? '#007ac1' : 'none')
-              .style('opacity', 0.7);
+              .style('opacity', 0.7)
+              .on('mouseover', function (event, d) {
+                tooltip.transition().duration(200).style('opacity', 0.9);
+                tooltip
+                  .html(
+                    'Location X: ' +
+                      Math.abs(shot.locationX) +
+                      '<br/>Location Y: ' +
+                      Math.abs(shot.locationY) +
+                      '<br>Diatance: ' +
+                      Math.sqrt(
+                        shot.locationX ** 2 + shot.locationY ** 2
+                      ).toFixed(2)
+                  )
+                  .style('left', event.pageX + 10 + 'px')
+                  .style('top', event.pageY - 28 + 'px');
+
+                d3.select(this).style('opacity', 1).attr('r', 7);
+              })
+              .on('mouseout', function () {
+                tooltip.transition().duration(500).style('opacity', 0);
+
+                d3.select(this).style('opacity', 0.7).attr('r', 5);
+              });
           });
         }
       });
     }
   }
 
-  drawShotsDistribution() {}
+  drawShotsDistribution() {
+    const svg = d3.select('#shotDistributionPlot');
+    svg.selectAll('*').remove();
+
+    const width = +svg.attr('width');
+    const height = +svg.attr('height');
+    const padding = { top: 20, right: 20, bottom: 30, left: 35 };
+
+    svg.style('background-color', '#f9f9f9');
+
+    const distances = [];
+    if (this.playerSummary && this.playerSummary.games) {
+      this.playerSummary.games.forEach((game) => {
+        if (game.shots) {
+          game.shots.forEach((shot) => {
+            const distance = Math.sqrt(
+              shot.locationX ** 2 + shot.locationY ** 2
+            );
+            distances.push(distance);
+          });
+        }
+      });
+    }
+
+    const tooltip = d3
+      .select('body')
+      .append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0)
+      .style('background-color', 'white')
+      .style('padding', '5px')
+      .style('border', '1px solid #ccc')
+      .style('border-radius', '5px')
+      .style('position', 'absolute')
+      .style('pointer-events', 'none');
+
+    const histogram = d3
+      .histogram()
+      .value((d) => d)
+      .domain([0, 50])
+      .thresholds(30);
+
+    const bins = histogram(distances);
+
+    const x = d3
+      .scaleLinear()
+      .domain([0, 50])
+      .range([padding.left, width - padding.right]);
+
+    const y = d3
+      .scaleLinear()
+      .domain([0, 30])
+      .range([height - padding.bottom, padding.top]);
+
+    const colorScale = d3
+      .scaleLinear<string>()
+      .domain([0, 30])
+      .range(['#4cb8e6', '#007ac1']);
+
+    const xAxis = d3.axisBottom(x).ticks(10).tickFormat(d3.format('d'));
+    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d3.format('d'));
+
+    svg
+      .append('g')
+      .attr('transform', `translate(0,${height - padding.bottom})`)
+      .call(xAxis)
+      .attr('color', '#777');
+
+    svg
+      .append('g')
+      .attr('transform', `translate(${padding.left},0)`)
+      .call(yAxis)
+      .attr('color', '#777');
+
+    svg
+      .append('text')
+      .attr('x', width / 2)
+      .attr('y', height)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#777')
+      .text('Shot Distance');
+
+    svg
+      .append('text')
+      .attr('transform', 'rotate(-90)')
+      .attr('y', 10)
+      .attr('x', -height / 2)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#777')
+      .text('Number of Shots');
+
+    svg
+      .selectAll('rect')
+      .data(bins)
+      .enter()
+      .append('rect')
+      .attr('x', (d) => x(d.x0 as number))
+      .attr('y', (d) => y(d.length))
+      .attr('width', (d) => x(d.x1 as number) - x(d.x0 as number))
+      .attr('height', (d) => height - padding.bottom - y(d.length))
+      .attr('fill', (d) => colorScale(d.length))
+      .attr('stroke', '#3399ff')
+      .attr('stroke-width', 0.5)
+      .on('mouseover', function (event, d) {
+        tooltip.transition().duration(200).style('opacity', 0.9);
+        tooltip
+          .html(
+            'Shot Distance: ' +
+              d.x0 +
+              ' to ' +
+              d.x1 +
+              '<br/>' +
+              'Number of Shots: ' +
+              d.length
+          )
+          .style('left', event.pageX + 5 + 'px')
+          .style('top', event.pageY - 28 + 'px');
+      })
+      .on('mouseout', function (d) {
+        tooltip.transition().duration(500).style('opacity', 0);
+      });
+  }
 
   fetchPlayerData(playerID: number): void {
     if (playerID !== null) {
@@ -423,6 +602,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               this.cdr.detectChanges();
               this.drawShotsChart();
               this.drawShotsDistance();
+              this.drawShotsDistribution();
             }
           },
           (error) => {

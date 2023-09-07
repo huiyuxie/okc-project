@@ -52,6 +52,13 @@ $primary-font: "Arial", sans-serif;
     padding: 30px;
   }
 
+  // ---- Shot Distribution Plot Styles ---- //
+  #shotDistributionPlot {
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+  }
+
   // ---- Tooltip Styles ---- //
   #tooltip {
     position: absolute;
