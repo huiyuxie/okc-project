@@ -313,10 +313,20 @@
           <p></p>
           <p><strong>Player Efficiency Rating (PER)</strong></p>
           <p>
-            PER is calculated by taking the difference between positive and
-            negative scores and then dividing by the total game minutes. <br />
-            First, the efficiency data is calculated and showed in the radar
-            chart as below.
+            (1) Efficiency scores are calculated by measuring the effective hits
+            over a given period of time. For example, <br />
+            Free Throw Efficiency: Free Throws Made / Game Time <br />
+            Assists Efficiency: Assists / Game Time <br />
+            Steals Efficiency: Steals / Game Time <br />
+            Rebounds Efficiency: (Offensive Rebounds + Deffensive Rebounds) /
+            Game Time <br />
+            Fouls Efficiency: (Offensive Fouls + Deffensive Fouls) / Game
+            Time<br />
+            and other Efficiency etc.<br />
+
+            <br />
+            The efficiency scores are shown as below on the radar graph. Note
+            that negative efficiency are marked with an * sign.
           </p>
 
           <div class="radar-container">
@@ -324,19 +334,91 @@
           </div>
 
           <p>
-            Positive Stats (Weights): <br />
-            Points (0.8)<br />
-            Assists (0.3)<br />
-            Offensive/Deffensive Rebounds (0.2)<br />
-            Steals (0.2) <br />
-            Blocks (0.2)
+            <br />
+            (2) Provide each efficiency field with its own weight. Check tables,
+            <br />
           </p>
 
-          <p>
-            Negative Stats (Weights): <br />
-            Turnovers (0.1)<br />
-            Offensive/Deffensive Fouls (0.2)
-          </p>
+          <div class="table-container">
+            <!-- Positive Efficiencies Table -->
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Positive Efficiency (Weights)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Free Throws</td>
+                  <td>3.0</td>
+                </tr>
+                <tr>
+                  <td>Two Pointers</td>
+                  <td>6.0</td>
+                </tr>
+                <tr>
+                  <td>Three Pointers</td>
+                  <td>9.0</td>
+                </tr>
+                <tr>
+                  <td>Assists</td>
+                  <td>2.0</td>
+                </tr>
+                <tr>
+                  <td>Offensive/Deffensive Rebounds</td>
+                  <td>2.0</td>
+                </tr>
+                <tr>
+                  <td>Steals</td>
+                  <td>1.0</td>
+                </tr>
+                <tr>
+                  <td>Blocks</td>
+                  <td>1.0</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Negative Efficiencies Table -->
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Negative Efficiency (Weights)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Turnovers</td>
+                  <td>1.0</td>
+                </tr>
+                <tr>
+                  <td>Offensive/Deffensive Fouls</td>
+                  <td>2.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <br />
+          (3) Calculate the overall PER by the formula given as below
+          <div class="formula-container">
+            <div class="formula-content">
+              <span>PER</span>
+              <span class="formula-operator">=</span>
+              <span class="sum-sign">&Sigma;</span>
+              <span>(Positive Efficiency * Weights)</span>
+              <span class="formula-operator">-</span>
+              <span class="sum-sign">&Sigma;</span>
+              <span>(Negative Efficiency * Weights)</span>
+              <span class="formula-operator">=</span>
+              <span>{{ valuePER.toFixed(2) }}</span>
+            </div>
+          </div>
+
+          <br />
+          * Note that the weights here are determined based on an initial guess
+          (i.e., intuition) and can be refined through data fitting in the
+          model. However, the current scale of data cannot achieve this.<br />
         </div>
       </mat-card-content>
     </mat-card>

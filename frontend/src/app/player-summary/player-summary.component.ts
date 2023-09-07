@@ -62,6 +62,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   public totalPerformance: number = 0;
 
+  public valuePER: number = 0;
+
   radarChartLabels: string[] = [
     'Free Throws Efficiency',
     'Two Pointers Efficiency',
@@ -104,6 +106,25 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       return 'Tune Squad';
     }
     return '';
+  }
+
+  // Get player efficiency rating
+  getPER(): number {
+    return (
+      (this.totalFreeThrowsMade / this.totalMinutes) * 3 +
+      (this.totalTwoPointersMade / this.totalMinutes) * 6 +
+      (this.totalThreePointersMade / this.totalMinutes) * 9 +
+      (this.totalAssists / this.totalMinutes) * 2 +
+      ((this.totalOffensiveRebounds + this.totalDeffensiveRebounds) /
+        this.totalMinutes) *
+        2 +
+      (this.totalSteals / this.totalMinutes) * 1 +
+      (this.totalBlocks / this.totalMinutes) * 1 -
+      (this.totalTurnovers / this.totalMinutes) * 1 -
+      ((this.totalOffensiveFouls + this.totalDeffensiveFouls) /
+        this.totalMinutes) *
+        2
+    );
   }
 
   // Draw shots on the given court graph
@@ -479,29 +500,24 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
             (this.totalFreeThrowsMade / this.totalMinutes).toFixed(2),
             (this.totalTwoPointersMade / this.totalMinutes).toFixed(2),
             (this.totalThreePointersMade / this.totalMinutes).toFixed(2),
-            (this.totalAssists / this.totalMinutes + 0.1).toFixed(2),
+            (this.totalAssists / this.totalMinutes).toFixed(2),
             (
               (this.totalOffensiveRebounds + this.totalDeffensiveRebounds) /
-                this.totalMinutes +
-              0.1
+              this.totalMinutes
             ).toFixed(2),
             (this.totalSteals / this.totalMinutes).toFixed(2),
             (this.totalBlocks / this.totalMinutes).toFixed(2),
             (this.totalTurnovers / this.totalMinutes).toFixed(2),
             (
               (this.totalOffensiveFouls + this.totalDeffensiveFouls) /
-                this.totalMinutes +
-              0.1
+              this.totalMinutes
             ).toFixed(2),
           ],
-          backgroundColor: 'rgba(0, 122, 193, 0.2)',
-          borderColor: radarColor,
+          pointborderColor: 'rgba(0, 122, 193, 0.3)',
+          borderColor: 'rgba(0, 122, 193, 0.3)',
+          backgroudColor: 'rgba(0, 122, 193, 0.3)',
+          pointBackgroundColor: radarColor,
           borderWidth: 2,
-          pointBackgroundColor: this.radarChartLabels.map((label) =>
-            label.includes('Turnovers') || label.includes('Fouls')
-              ? 'transparent'
-              : radarColor
-          ),
           pointBorderWidth: 2,
           pointRadius: 5,
           pointHoverRadius: 8,
@@ -552,14 +568,6 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               backgroundColor: 'rgba(0, 0, 0, 0.8)',
               cornerRadius: 4,
             },
-            legend: {
-              position: 'bottom',
-              labels: {
-                color: '#333333',
-                boxWidth: 12,
-                padding: 10,
-              },
-            },
           },
         },
       });
@@ -599,6 +607,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
             this.totalMinutes = 0;
 
             this.totalPerformance = 0;
+
+            this.valuePER = 0;
 
             if (this.playerSummary) {
               this.playerSummary.games.forEach((game) => {
@@ -643,6 +653,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
                   game.offensiveFouls +
                   game.defensiveFouls;
               });
+
+              this.valuePER = this.getPER();
 
               this.performancePieChartData = [
                 {

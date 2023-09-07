@@ -7,6 +7,29 @@ $primary-font: "Arial", sans-serif;
   font-family: $primary-font;
   padding: 40px;
 
+  table {
+    border-collapse: collapse;
+    width: 48%;
+    background-color: #e5f5fe;
+  }
+
+  th,
+  td {
+    padding: 8px 12px;
+    height: 10px;
+    border: 1px solid #007ac1;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007ac1;
+    color: white;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -21,10 +44,6 @@ $primary-font: "Arial", sans-serif;
 
   strong {
     font-weight: 600;
-  }
-
-  .hidden {
-    display: none;
   }
 
   // ---- Form Styles ---- //
@@ -69,6 +88,50 @@ $primary-font: "Arial", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .table-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  // ---- Formula Styles ---- //
+  .formula-container {
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    width: fit-content;
+    background-color: #f0f0f0;
+    margin: 20px;
+    margin-left: 0px;
+  }
+
+  .formula-title {
+    font-size: 1.2rem;
+    color: #007ac1;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .formula-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .formula-content span {
+    font-weight: bold;
+  }
+
+  .formula-operator {
+    margin: 0 8px;
+  }
+
+  .sum-sign {
+    font-size: 1.5rem;
   }
 
   // ---- Shot Chart Styles ---- //
