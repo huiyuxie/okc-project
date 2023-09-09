@@ -71,3 +71,7 @@ The fundamental design principle for the frontend is to ensure conciseness and c
 ![Screenshot 2](/screenshots/Screenshot2.png)
 
 ![Screenshot 3](/screenshots/Screenshot3.png)
+
+![Screenshot 4](/screenshots/Screenshot4.png)
+
+![Screenshot 5](/screenshots/Screenshot5.png)
