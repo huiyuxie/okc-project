@@ -776,9 +776,18 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Selection click handler
   onPlayerSelectionChange(): void {
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+    d3.select('#shotChart').selectAll('*').remove();
+
+    d3.select('#shotDistancePlot').selectAll('*').remove();
+
+    d3.select('#shotDistributionPlot').selectAll('*').remove();
+
+    this.radarChart.destroy();
+  }
 }
