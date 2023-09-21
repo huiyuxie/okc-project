@@ -19,7 +19,8 @@ const routes: Routes = [
       ),
     data: { preload: true },
   },
-  { path: '**', redirectTo: 'player-summary' },
+  // To make id parameter route work
+  //{ path: '**', redirectTo: 'player-summary' },
 ];
 
 export const routing: ModuleWithProviders<RouterModule> =

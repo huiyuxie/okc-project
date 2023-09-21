@@ -96,6 +96,9 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   // Initialize component (player ID is null by default)
   ngOnInit(): void {
+    if (this.activatedRoute.snapshot.params.id) {
+      this.selectedPlayerID = this.activatedRoute.snapshot.params.id;
+    }
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
@@ -785,6 +788,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   // Selection click handler
   onPlayerSelectionChange(): void {
+    this.router.navigate(['/player-summary', this.selectedPlayerID]);
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
@@ -796,6 +800,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
     d3.select('#shotDistributionPlot').selectAll('*').remove();
 
-    this.radarChart.destroy();
+    if (this.radarChart && typeof this.radarChart.destroy === 'function') {
+      this.radarChart.destroy();
+    }
   }
 }
