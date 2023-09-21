@@ -94,6 +94,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     );
   }
 
+  // Initialize component (player ID is null by default)
   ngOnInit(): void {
     this.fetchPlayerData(this.selectedPlayerID);
   }
@@ -581,6 +582,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
         .getPlayerSummary(playerID)
         .pipe(untilDestroyed(this))
         .subscribe(
+          // Next callback
           (data: PlayerSummary) => {
             this.playerSummary = data;
             this.playerSummary.team = this.getTeam(playerID);
@@ -769,8 +771,13 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
               this.drawRadarChart();
             }
           },
+          // Error callback
           (error) => {
             console.error('Error fetching player summary:', error);
+          },
+          // Complete callback
+          () => {
+            console.log('Player summary fetching completed');
           }
         );
     }
@@ -781,6 +788,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     this.fetchPlayerData(this.selectedPlayerID);
   }
 
+  // Destroy all charts
   ngOnDestroy() {
     d3.select('#shotChart').selectAll('*').remove();
 
